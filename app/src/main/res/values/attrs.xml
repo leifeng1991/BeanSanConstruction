@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="ShadowLayout" tools:ignore="ResourceName">
+        <attr name="shadowLeft" format="dimension" />
+        <attr name="shadowRight" format="dimension" />
+        <attr name="shadowTop" format="dimension" />
+        <attr name="shadowBottom" format="dimension" />
+        <attr name="radius" format="dimension" />
+        <attr name="blur" format="dimension" />
+        <attr name="shadowColor" format="color" />
+    </declare-styleable>
+</resources>

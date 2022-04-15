@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.activity.RefuelRecordActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/mCommonTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_dp45"
+                android:background="#ffffff"
+                tl:tl_indicator_color="#19CC7E"
+                tl:tl_indicator_margin_left="@dimen/base_dp20"
+                tl:tl_indicator_margin_right="@dimen/base_dp20"
+                tl:tl_textSelectColor="#19CC7E"
+                tl:tl_textUnselectColor="#80000000"
+                tl:tl_textsize="@dimen/base_sp12"
+                tl:tl_underline_color="#DBDBDB"
+                tl:tl_underline_height="1dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/base_dp45"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/base_dp10"
+                android:gravity="center"
+                android:minWidth="@dimen/base_dp60"
+                android:text="排序"
+                android:textColor="#80000000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.RefuelActivity">
+
+        <LinearLayout
+            android:id="@+id/mRefuelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp15"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/mTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp22"
+                android:text="2021-5-31"
+                android:textColor="#ff4a4a4a"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/mOilsTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp40"
+                android:text="油品："
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/mOilsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp10"
+                android:paddingTop="@dimen/base_dp10"
+                android:paddingBottom="@dimen/base_dp10"
+                android:textColor="#000"
+                android:textSize="15sp"
+                tools:text="0 #" />
+
+            <TextView
+                android:id="@+id/mOilsTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="柴油"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/mPickViewImageView"
+                android:layout_width="@dimen/base_dp40"
+                android:layout_height="@dimen/base_dp21"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/base_dp10"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:paddingStart="@dimen/base_dp10"
+                android:paddingRight="@dimen/base_dp10"
+                android:src="@mipmap/ic_refuel_more" />
+        </LinearLayout>
+
+        <com.trinidad.beansanconstruction.weight.ShadowLayout
+            android:id="@+id/mRootShadowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/base_dp15"
+            android:paddingTop="@dimen/base_dp49"
+            android:paddingEnd="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp25"
+            app:layout_constraintTop_toBottomOf="@+id/mRefuelLayout"
+            app:radius="4dp"
+            app:shadowBottom="15dp"
+            app:shadowColor="#80C4C4C4"
+            app:shadowLeft="15dp"
+            app:shadowRight="15dp"
+            app:shadowTop="15dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ruffian.library.widget.RLinearLayout
+                    android:id="@+id/mLicencePlateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/base_dp15"
+                    android:paddingTop="@dimen/base_dp13"
+                    android:paddingRight="@dimen/base_dp15"
+                    android:paddingBottom="@dimen/base_dp13"
+                    app:border_color_normal="#19CC7E"
+                    app:border_width_normal="@dimen/base_dp1"
+                    app:corner_radius="@dimen/base_dp5"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加油车牌："
+                        android:textColor="#ff9b9b9b"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/mLicencePlateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4A4A4A"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:text="桂B G6688" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/mRefuelScanImageView"
+                        android:layout_width="@dimen/base_dp20"
+                        android:layout_height="@dimen/base_dp20"
+                        android:src="@mipmap/ic_refuel_scan" />
+                </com.ruffian.library.widget.RLinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mCurrentOilPriceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp28"
+                    android:layout_marginTop="@dimen/base_dp25"
+                    android:layout_marginEnd="@dimen/base_dp28"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/mLicencePlateLayout">
+
+                    <TextView
+                        android:id="@+id/mSetPriceTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前油价："
+                        android:textColor="#ff9b9b9b"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mSetPriceTextView"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/mSetPriceTextView" />
+
+                    <TextView
+                        android:id="@+id/mSetPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="@dimen/base_dp15"
+                        android:text="0"
+                        android:textColor="#fffa6400"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/mSetPriceTitleTextView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_dp10"
+                        android:text="元/升"
+                        android:textColor="#ff9b9b9b"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mSetPriceTextView"
+                        app:layout_constraintLeft_toRightOf="@+id/mSetPriceTextView"
+                        app:layout_constraintTop_toTopOf="@+id/mSetPriceTextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mRefuelNumLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp28"
+                    android:layout_marginTop="@dimen/base_dp25"
+                    android:layout_marginEnd="@dimen/base_dp28"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/mCurrentOilPriceLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加油数量："
+                        android:textColor="#ff9b9b9b"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mSetPriceTextView"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/mSetPriceTextView" />
+
+                    <EditText
+                        android:id="@+id/mRefuelNumTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="@dimen/base_dp15"
+                        android:paddingEnd="@dimen/base_dp15"
+                        android:text="0"
+                        android:textColor="#fffa6400"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/mSetPriceTitleTextView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="升"
+                        android:textColor="#ff9b9b9b"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mSetPriceTextView"
+                        app:layout_constraintLeft_toRightOf="@+id/mSetPriceTextView"
+                        app:layout_constraintTop_toTopOf="@+id/mSetPriceTextView" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/mLineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/base_dp39"
+                    android:background="#C9C9C9"
+                    app:layout_constraintTop_toBottomOf="@+id/mRefuelNumLayout" />
+
+                <TextView
+                    android:id="@+id/mPriceTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp29"
+                    android:layout_marginTop="@dimen/base_dp27"
+                    android:text="加油金额："
+                    android:textColor="#ff9b9b9b"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mLineView" />
+
+                <TextView
+                    android:id="@+id/mPriceTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp33"
+                    android:layout_marginTop="@dimen/base_dp20"
+                    android:text="¥ 0.00"
+                    android:textColor="#fffa6400"
+                    android:textSize="25sp"
+                    app:layout_constraintLeft_toRightOf="@+id/mPriceTitleTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mLineView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.trinidad.beansanconstruction.weight.ShadowLayout>
+
+        <TextView
+            android:id="@+id/mTodayRefuelTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp11"
+            android:paddingLeft="@dimen/base_dp15"
+            android:paddingRight="@dimen/base_dp15"
+            android:text="今日已加油：0   升"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/mRootShadowLayout" />
+
+        <TextView
+            android:id="@+id/mResetTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp15"
+            android:text="重置"
+            android:textColor="#ff3a3a3a"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="260"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mSaveTextView" />
+
+        <TextView
+            android:id="@+id/mSaveTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#19CC7E"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp15"
+            android:text="保存"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="490"
+            app:layout_constraintLeft_toRightOf="@+id/mResetTextView"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

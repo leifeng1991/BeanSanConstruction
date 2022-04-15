@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mHeaderBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/mHomeTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/base_dp5"
+                android:paddingBottom="@dimen/base_dp5"
+                android:text="千里科技"
+                android:textColor="#ff333333"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mScanCodeImageView"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginRight="@dimen/base_dp15"
+                android:src="@mipmap/ic_scan"
+                app:layout_constraintBottom_toBottomOf="@+id/mHomeTitleTextView"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mHomeTitleTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.youth.banner.Banner
+            android:id="@+id/mHomeBanner"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginLeft="@dimen/com_dp15"
+            android:layout_marginTop="@dimen/com_dp10"
+            android:layout_marginRight="@dimen/com_dp15"
+            app:banner_indicator_gravity="right"
+            app:banner_indicator_height="4dp"
+            app:banner_indicator_marginBottom="@dimen/base_dp10"
+            app:banner_indicator_marginRight="@dimen/base_dp10"
+            app:banner_indicator_normal_color="#88ffffff"
+            app:banner_indicator_normal_width="@dimen/com_dp4"
+            app:banner_indicator_selected_color="#65C368"
+            app:banner_indicator_selected_width="@dimen/com_dp8"
+            app:banner_indicator_space="@dimen/com_dp4"
+            app:banner_loop_time="5000"
+            app:banner_radius="@dimen/base_dp9"
+            app:layout_constraintTop_toBottomOf="@+id/mHeaderBarLayout" />
+
+        <TextView
+            android:id="@+id/mFeatureListTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp25"
+            android:text="功能列表"
+            android:textColor="#ff4a4a4a"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@+id/mHomeBanner"
+            app:layout_constraintTop_toBottomOf="@+id/mHomeBanner" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mMenuRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/mFeatureListTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

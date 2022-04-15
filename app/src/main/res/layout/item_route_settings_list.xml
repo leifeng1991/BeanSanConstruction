@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.trinidad.beansanconstruction.weight.ShadowLayout
+        android:id="@+id/mRootShadowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/base_dp15"
+        android:paddingTop="@dimen/base_dp20"
+        android:paddingEnd="@dimen/base_dp15"
+        android:paddingBottom="@dimen/base_dp13"
+        app:radius="6dp"
+        app:shadowBottom="10dp"
+        app:shadowColor="#80C4C4C4"
+        app:shadowLeft="15dp"
+        app:shadowRight="15dp"
+        app:shadowTop="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/startTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="碧桂园"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mToTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mToTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="至"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/startTextView"
+                app:layout_constraintLeft_toRightOf="@+id/startTextView"
+                app:layout_constraintRight_toLeftOf="@+id/endTextView"
+                app:layout_constraintTop_toTopOf="@+id/startTextView" />
+
+            <TextView
+                android:id="@+id/endTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="碧桂园"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/mToTextView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mDistanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dp20"
+                android:text="距离：10Km"
+                android:textColor="#80000000"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startTextView" />
+
+            <TextView
+                android:id="@+id/mUnitPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dp20"
+                android:text="单价：¥200"
+                android:textColor="#80000000"
+                android:textSize="15sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startTextView" />
+
+            <TextView
+                android:id="@+id/mLeftClockInScopeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dp20"
+                android:text="打卡范围：50m"
+                android:textColor="#80000000"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mDistanceTextView" />
+
+            <TextView
+                android:id="@+id/mRightClockInScopeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dp20"
+                android:text="打卡范围：80m"
+                android:textColor="#80000000"
+                android:textSize="15sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mDistanceTextView" />
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/mHaveClosedRTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dp20"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:layout_marginBottom="@dimen/base_dp1"
+                android:paddingLeft="@dimen/base_dp19"
+                android:paddingTop="@dimen/base_dp3"
+                android:paddingRight="@dimen/base_dp19"
+                android:paddingBottom="@dimen/base_dp3"
+                android:text="已关闭"
+                android:textColor="#FA6400"
+                android:textSize="15sp"
+                app:background_normal="@color/white"
+                app:border_color_normal="#FA6400"
+                app:border_width_normal="@dimen/base_dp1"
+                app:corner_radius="@dimen/base_dp3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mHaveOpenedRTextView"
+                app:layout_constraintTop_toBottomOf="@+id/mRightClockInScopeTextView"
+                app:layout_goneMarginRight="@dimen/base_dp15" />
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/mHaveOpenedRTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dp20"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:layout_marginBottom="@dimen/base_dp1"
+                android:paddingLeft="@dimen/base_dp19"
+                android:paddingTop="@dimen/base_dp3"
+                android:paddingRight="@dimen/base_dp19"
+                android:paddingBottom="@dimen/base_dp3"
+                android:text="已开通"
+                android:textColor="#ff19cc7e"
+                android:textSize="15sp"
+                app:background_normal="@color/white"
+                app:border_color_normal="#ff19cc7e"
+                app:border_width_normal="@dimen/base_dp1"
+                app:corner_radius="@dimen/base_dp3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mEditRTextView"
+                app:layout_constraintTop_toBottomOf="@+id/mRightClockInScopeTextView" />
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/mEditRTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dp20"
+                android:layout_marginBottom="@dimen/base_dp1"
+                android:paddingLeft="@dimen/base_dp27"
+                android:paddingTop="@dimen/base_dp3"
+                android:paddingRight="@dimen/base_dp27"
+                android:paddingBottom="@dimen/base_dp3"
+                android:text="编辑"
+                android:textColor="#ff19cc7e"
+                android:textSize="15sp"
+                app:background_normal="@color/white"
+                app:border_color_normal="#ff19cc7e"
+                app:border_width_normal="@dimen/base_dp1"
+                app:corner_radius="@dimen/base_dp3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mRightClockInScopeTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.trinidad.beansanconstruction.weight.ShadowLayout>
+</layout>

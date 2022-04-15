@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6"
+        android:orientation="vertical"
+        tools:context=".ui.activity.SelectStartEndLocationActivity">
+
+        <com.ruffian.library.widget.REditText
+            android:id="@+id/mSearchEditTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp15"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginEnd="@dimen/base_dp15"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            app:corner_radius="3dp" />
+
+        <com.moufans.lib_base.base.recyclerview.MyRecyclerView
+            android:id="@+id/mMyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#19CC7E"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp15"
+            android:text="新增起始点/项目"
+            android:textColor="#ffffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+</layout>

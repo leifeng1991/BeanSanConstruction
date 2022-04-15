@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.trinidad.beansanconstruction.weight.ShadowLayout
+            android:id="@+id/mRootShadowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/base_dp17"
+            android:paddingBottom="@dimen/base_dp17"
+            app:radius="6dp"
+            app:shadowBottom="7dp"
+            app:shadowColor="#80C4C4C4"
+            app:shadowLeft="15dp"
+            app:shadowRight="15dp"
+            app:shadowTop="7dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ruffian.library.widget.RTextView
+                    android:id="@+id/mCarCardRTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp15"
+                    android:paddingStart="@dimen/base_dp8"
+                    android:paddingTop="@dimen/base_dp2"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="@dimen/base_dp2"
+                    android:textSize="15sp"
+                    app:background_normal="#4D19CC7E"
+                    app:corner_radius="4dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:text_color_normal="#ff000000"
+                    tools:text="桂B-WU898" />
+
+                <TextView
+                    android:id="@+id/mCarTypeRTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_dp15"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mCarCardRTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mCarCardRTextView"
+                    tools:text="VOLVO钩机" />
+
+                <LinearLayout
+                    android:id="@+id/mRefuelLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp19"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/base_dp15"
+                    android:paddingEnd="@dimen/base_dp15"
+                    app:layout_constraintTop_toBottomOf="@+id/mCarCardRTextView">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加油量"
+                        android:textColor="#80000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/mFuelQuantityTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_dp10"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp"
+                        tools:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="升"
+                        android:textColor="#80000000"
+                        android:textSize="14sp" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="油价"
+                        android:textColor="#80000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/mOilPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_dp10"
+                        android:layout_marginEnd="@dimen/base_dp10"
+                        android:textColor="#ff000000"
+                        android:textSize="20sp"
+                        tools:text="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元/升"
+                        android:textColor="#80000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/mTransportCompanyTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp15"
+                    android:layout_marginTop="@dimen/base_dp19"
+                    android:text="运输公司："
+                    android:textColor="#80000000"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mRefuelLayout" />
+
+                <TextView
+                    android:id="@+id/mTransportCompanyTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_dp15"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/mTransportCompanyTitleTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mTransportCompanyTitleTextView"
+                    tools:text="广西炳胜" />
+
+                <TextView
+                    android:id="@+id/mMotorcadeTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp15"
+                    android:layout_marginTop="@dimen/base_dp19"
+                    android:text="车队："
+                    android:textColor="#80000000"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTransportCompanyTitleTextView" />
+
+                <TextView
+                    android:id="@+id/mMotorcadeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_dp15"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/mMotorcadeTitleTextView"
+                    app:layout_constraintRight_toLeftOf="@+id/mOwnersTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mMotorcadeTitleTextView"
+                    tools:text="广西炳胜" />
+
+                <TextView
+                    android:id="@+id/mOwnersTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_dp15"
+                    android:textColor="#80000000"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/mMotorcadeTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mMotorcadeTitleTextView"
+                    tools:text="车主：李思思" />
+
+                <TextView
+                    android:id="@+id/mTimeTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp15"
+                    android:layout_marginTop="@dimen/base_dp19"
+                    android:text="时间："
+                    android:textColor="#80000000"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mMotorcadeTitleTextView" />
+
+                <TextView
+                    android:id="@+id/mTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_dp15"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@+id/mTimeTitleTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mTimeTitleTextView"
+                    tools:text="2022.5.31 15:30" />
+
+                <View
+                    android:id="@+id/mLineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/base_dp25"
+                    android:background="#D2D2D2"
+                    app:layout_constraintTop_toBottomOf="@+id/mTimeTitleTextView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp13"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/base_dp15"
+                    android:paddingEnd="@dimen/base_dp15"
+                    app:layout_constraintTop_toBottomOf="@+id/mLineView">
+
+                    <TextView
+                        android:id="@+id/mOperateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#80000000"
+                        android:textSize="14sp"
+                        tools:text="操作：谢同学" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="金额 "
+                        android:textColor="#80000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/mTotalPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_dp15"
+                        android:textColor="#fffa6400"
+                        android:textSize="20sp"
+                        tools:text="¥2054.34" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.trinidad.beansanconstruction.weight.ShadowLayout>
+    </LinearLayout>
+</layout>

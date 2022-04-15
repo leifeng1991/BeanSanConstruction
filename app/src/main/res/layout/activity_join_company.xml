@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.JoinCompanyActivity">
+
+        <com.ruffian.library.widget.REditText
+            android:id="@+id/mSearchCompanyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp30"
+            android:layout_marginTop="@dimen/base_dp17"
+            android:layout_marginRight="@dimen/base_dp30"
+            android:hint="请输入你所在公司的名称"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="@dimen/base_dp15"
+            android:paddingTop="@dimen/base_dp12"
+            android:paddingRight="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp12"
+            android:textColorHint="#ff9b9b9b"
+            android:textSize="@dimen/base_sp15"
+            app:background_normal="@color/white"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="@dimen/base_dp1"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:text_color_normal="#000" />
+
+        <Space
+            android:id="@+id/mJoinCompanySpace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_dp15"
+            app:layout_constraintTop_toBottomOf="@+id/mSearchCompanyEditText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mCompanyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mJoinCompanySpace" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

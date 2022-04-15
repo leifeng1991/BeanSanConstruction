@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.trinidad.beansanconstruction.weight.ShadowLayout
+            android:id="@+id/mRootShadowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/base_dp15"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingEnd="@dimen/base_dp14"
+            android:paddingBottom="@dimen/base_dp15"
+            app:radius="6dp"
+            app:shadowBottom="7dp"
+            app:shadowColor="#80C4C4C4"
+            app:shadowLeft="15dp"
+            app:shadowRight="15dp"
+            app:shadowTop="7dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mNameTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="碧桂园"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mCreateTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="创建日期：2021-5-31"
+                    android:textColor="#B4B4B4"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mNameTitleTextView"
+                    app:layout_constraintLeft_toRightOf="@+id/mNameTitleTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mNameTitleTextView" />
+
+                <TextView
+                    android:id="@+id/mAddressTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp15"
+                    android:text="地址："
+                    android:textColor="#ffb4b4b4"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mNameTitleTextView" />
+
+                <TextView
+                    android:id="@+id/mAddressTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="广西省柳州市博园大道20附近A地块2号楼-16-06号"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@+id/mAddressTitleTextView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mAddressTitleTextView" />
+
+                <com.ruffian.library.widget.RTextView
+                    android:id="@+id/mEditTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp15"
+                    android:layout_marginBottom="@dimen/base_dp1"
+                    android:paddingLeft="@dimen/base_dp27"
+                    android:paddingTop="@dimen/base_dp3"
+                    android:paddingRight="@dimen/base_dp27"
+                    android:paddingBottom="@dimen/base_dp3"
+                    android:textSize="15sp"
+                    app:background_normal="#fff"
+                    app:border_color_normal="#19CC7E"
+                    app:border_width_normal="@dimen/base_dp1"
+                    app:corner_radius="@dimen/base_dp6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mAddressTextView"
+                    app:text_color_normal="#19CC7E" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.trinidad.beansanconstruction.weight.ShadowLayout>
+    </LinearLayout>
+</layout>

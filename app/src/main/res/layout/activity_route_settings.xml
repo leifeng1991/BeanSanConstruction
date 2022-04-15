@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.activity.RouteSettingsActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#FA6400 "
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp17"
+                android:text="起始点（项目）"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mStartRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp15"
+            android:paddingLeft="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp10"
+            android:textSize="@dimen/base_sp15"
+            android:gravity="center_vertical"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="6dp"
+            app:text_color_normal="#333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="@dimen/base_dp30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#FA6400 "
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp17"
+                android:text="终点（倒土点）"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mEndRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:paddingBottom="@dimen/base_dp15"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingLeft="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp10"
+            android:textSize="@dimen/base_dp15"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="6dp"
+            app:text_color_normal="#333333" />
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:paddingLeft="@dimen/base_dp15"
+            android:paddingTop="@dimen/base_dp12"
+            android:paddingRight="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp12"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单价："
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/mPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:textColor="#fffa6400"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元/次"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mSaveTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp15"
+            android:text="保存"
+            android:textSize="15sp"
+            app:background_normal="#19CC7E"
+            app:text_color_normal="@color/white" />
+    </LinearLayout>
+</layout>

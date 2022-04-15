@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.AuthorizeLoginActivity">
+
+        <com.ruffian.library.widget.RView
+            android:id="@+id/mOutView"
+            android:layout_width="@dimen/base_dp150"
+            android:layout_height="@dimen/base_dp104"
+            android:layout_marginTop="@dimen/base_dp183"
+            app:background_normal="#19CC7E"
+            app:corner_radius="@dimen/base_dp5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ruffian.library.widget.RView
+            android:id="@+id/mInnerView"
+            android:layout_width="@dimen/base_dp115"
+            android:layout_height="@dimen/base_dp78"
+            android:layout_marginStart="@dimen/base_dp13"
+            app:background_normal="#fff"
+            app:corner_radius="@dimen/base_dp5"
+            app:layout_constraintBottom_toBottomOf="@+id/mOutView"
+            app:layout_constraintLeft_toLeftOf="@+id/mOutView"
+            app:layout_constraintTop_toTopOf="@+id/mOutView" />
+
+        <com.ruffian.library.widget.RView
+            android:layout_width="@dimen/base_dp11"
+            android:layout_height="@dimen/base_dp11"
+            app:background_normal="@color/white"
+            app:corner_radius="@dimen/base_dp11"
+            app:layout_constraintBottom_toBottomOf="@+id/mOutView"
+            app:layout_constraintLeft_toRightOf="@+id/mInnerView"
+            app:layout_constraintRight_toRightOf="@+id/mOutView"
+            app:layout_constraintTop_toTopOf="@+id/mOutView" />
+
+        <TextView
+            android:id="@+id/mLoginTipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp50"
+            android:text="是否允许当前车载端账号登录"
+            android:textColor="#ff4a4a4a"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mOutView" />
+
+        <TextView
+            android:id="@+id/mLoginLocationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="登录地：柳州市"
+            android:visibility="invisible"
+            android:textColor="#ff19cc7e"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLoginTipTextView" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mAuthorizeLoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:paddingStart="@dimen/base_dp54"
+            android:paddingTop="@dimen/base_dp13"
+            android:paddingEnd="@dimen/base_dp54"
+            android:paddingBottom="@dimen/base_dp13"
+            android:text="授权登录"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            app:background_normal="#19CC7E"
+            app:corner_radius="@dimen/base_dp5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLoginLocationTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

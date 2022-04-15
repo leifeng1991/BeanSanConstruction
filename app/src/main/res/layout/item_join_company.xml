@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.trinidad.beansanconstruction.weight.ShadowLayout
+            android:id="@+id/mRootShadowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/base_dp17"
+            android:paddingTop="@dimen/base_dp19"
+            android:paddingEnd="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp17"
+            app:radius="4dp"
+            app:shadowBottom="7dp"
+            app:shadowColor="#80C4C4C4"
+            app:shadowLeft="30dp"
+            app:shadowRight="30dp"
+            app:shadowTop="7dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mCompanyNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="柳州市千里科技有限公司"
+                    android:textColor="#d9000000"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mCompanyCityTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="广西省"
+                    android:textColor="#ff9b9b9b"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mApplyJoinTextView"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/mApplyJoinTextView"
+                    app:layout_constraintTop_toTopOf="@+id/mApplyJoinTextView" />
+
+                <com.ruffian.library.widget.RTextView
+                    android:id="@+id/mApplyJoinTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp33"
+                    android:paddingLeft="@dimen/base_dp8"
+                    android:paddingTop="@dimen/base_dp2"
+                    android:paddingRight="@dimen/base_dp8"
+                    android:paddingBottom="@dimen/base_dp2"
+                    android:text="申请加入"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    app:background_normal="#19CC7E"
+                    app:corner_radius="@dimen/base_dp4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mCompanyNameTextView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.trinidad.beansanconstruction.weight.ShadowLayout>
+    </LinearLayout>
+</layout>

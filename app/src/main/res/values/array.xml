@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <array name="mine_bg_gradient">
+        <item>#19CC7E</item>
+        <item>#19CC7E</item>
+    </array>
+</resources>

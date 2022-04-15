@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.SplashActivity">
+
+        <ImageView
+            android:id="@+id/mSplashBgImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/com_dp0"
+            android:src="@mipmap/ic_splash"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/mSplashBottomLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1144" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp33"
+            android:layout_marginTop="@dimen/base_dp106"
+            android:text="千里出行\n出行保驾护航，安全回家"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/mSplashBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mSplashBgImageView"
+            app:layout_constraintVertical_weight="157">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="千里科技"
+                android:textColor="#ff795130"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mSplashVersionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version 1.0.0"
+                android:textColor="#ff795130"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

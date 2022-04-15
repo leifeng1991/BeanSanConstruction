@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.LoginActivity">
+
+        <TextView
+            android:id="@+id/mRegisterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp112"
+            android:text="登录/注册千里科技账号"
+            android:textColor="#ff4a4a4a"
+            android:textSize="21sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/mInputPhoneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp37"
+            android:layout_marginTop="@dimen/base_dp28"
+            android:layout_marginRight="@dimen/base_dp37"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/base_dp20"
+            android:paddingTop="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp20"
+            android:paddingBottom="@dimen/base_dp10"
+            app:background_normal="#F5F6F7"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintTop_toBottomOf="@+id/mRegisterTitle">
+
+            <ImageView
+                android:layout_width="@dimen/base_dp32"
+                android:layout_height="@dimen/base_dp52"
+                android:src="@mipmap/app_ic_login_phone" />
+
+            <com.trinidad.beansanconstruction.weight.ClearEditText
+                android:id="@+id/mInputPhoneEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/base_dp50"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textColorHint="#ff9b9b9b"
+                android:textSize="@dimen/base_sp19" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/mInputPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp37"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginRight="@dimen/base_dp37"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/base_dp20"
+            android:paddingTop="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp20"
+            android:paddingBottom="@dimen/base_dp10"
+            app:background_normal="#F5F6F7"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintTop_toBottomOf="@+id/mInputPhoneLayout">
+
+            <ImageView
+                android:layout_width="@dimen/base_dp32"
+                android:layout_height="@dimen/base_dp52"
+                android:src="@mipmap/app_ic_login_password" />
+
+            <com.trinidad.beansanconstruction.weight.ClearEditText
+                android:id="@+id/mInputPasswordEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/base_dp50"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入登录密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textColorHint="#ff9b9b9b"
+                android:textSize="@dimen/base_sp19" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/mInputYzmLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp37"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginRight="@dimen/base_dp37"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/base_dp20"
+            android:paddingTop="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp10"
+            android:paddingBottom="@dimen/base_dp10"
+            android:visibility="gone"
+            app:background_normal="#F5F6F7"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintTop_toBottomOf="@+id/mInputPhoneLayout">
+
+            <ImageView
+                android:layout_width="@dimen/base_dp32"
+                android:layout_height="@dimen/base_dp52"
+                android:src="@mipmap/app_ic_login_yzm" />
+
+            <com.trinidad.beansanconstruction.weight.ClearEditText
+                android:id="@+id/mInputYzmEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/base_dp10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textColorHint="#ff9b9b9b"
+                android:textSize="@dimen/base_sp19" />
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/mGetYzmRTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:minWidth="@dimen/base_dp110"
+                android:paddingTop="@dimen/base_dp7"
+                android:paddingBottom="@dimen/base_dp7"
+                android:gravity="center"
+                app:corner_radius="@dimen/base_dp6"
+                android:text="获取验证码"
+                android:textSize="@dimen/base_sp19"
+                app:border_color_normal="#19CC7E"
+                app:border_width_normal="1dp"
+                app:text_color_normal="#19CC7E" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <TextView
+            android:id="@+id/mMessageYzmLoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/base_dp18"
+            android:paddingBottom="@dimen/base_dp18"
+            android:text="用短信验证码登录"
+            android:textColor="#ff18cd7f"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/mInputPasswordLayout"
+            app:layout_constraintTop_toBottomOf="@+id/mInputPasswordLayout" />
+
+
+        <TextView
+            android:id="@+id/mForgetPasswordTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/base_dp18"
+            android:paddingBottom="@dimen/base_dp18"
+            android:text="忘记密码？"
+            android:textColor="#ff4a4a4a"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="@+id/mInputPasswordLayout"
+            app:layout_constraintTop_toBottomOf="@+id/mInputPasswordLayout" />
+
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mLoginRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp37"
+            android:layout_marginTop="@dimen/base_dp37"
+            android:layout_marginRight="@dimen/base_dp37"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp13"
+            android:paddingBottom="@dimen/base_dp13"
+            android:text="登录"
+            android:textSize="19sp"
+            app:background_normal="#19CC7E"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mMessageYzmLoginTextView"
+            app:text_color_normal="@color/white" />
+
+        <TextView
+            android:id="@+id/mRegisterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即注册"
+            android:padding="@dimen/base_dp18"
+            android:textColor="#ff18cd7f"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLoginRTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

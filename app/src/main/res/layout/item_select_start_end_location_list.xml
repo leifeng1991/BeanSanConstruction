@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_dp15"
+        android:layout_marginTop="@dimen/base_dp7"
+        android:layout_marginEnd="@dimen/base_dp15"
+        android:layout_marginBottom="@dimen/base_dp8"
+        android:background="@color/white"
+        android:paddingStart="@dimen/base_dp15"
+        android:paddingTop="@dimen/base_dp20"
+        android:paddingEnd="@dimen/base_dp15"
+        android:paddingBottom="@dimen/base_dp13"
+        app:background_normal="@color/white"
+        app:corner_radius="@dimen/base_dp6">
+
+        <TextView
+            android:id="@+id/startTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="碧桂园"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mCreationDateTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mCreationDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建日期：2021-5-31"
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mLocationTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:text="地址："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/startTextView" />
+
+        <TextView
+            android:id="@+id/mLocationTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:text="广西省柳州市博园大道20附近A地块 2号楼-16-06号"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/mLocationTitleTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/startTextView" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mSelectRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp7"
+            android:paddingStart="@dimen/base_dp27"
+            android:paddingTop="@dimen/base_dp3"
+            android:paddingEnd="@dimen/base_dp27"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="选择"
+            android:textColor="#ff19cc7e"
+            android:textSize="15sp"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="@dimen/base_dp3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLocationTextView" />
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

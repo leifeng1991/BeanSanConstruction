@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_dp15"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/base_dp37"
+        android:paddingRight="@dimen/base_dp37">
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp13"
+            android:paddingBottom="@dimen/base_dp13"
+            android:text="运输司机"
+            android:textSize="19sp"
+            app:background_selected="#19CC7E"
+            app:background_normal="#F5F6F7"
+            app:corner_radius="6dp"
+            app:text_color_checked="@color/white"
+            app:text_color_normal="#d9000000" />
+    </LinearLayout>
+</layout>

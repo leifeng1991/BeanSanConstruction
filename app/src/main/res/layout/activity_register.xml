@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.RegisterActivity">
+
+        <TextView
+            android:id="@+id/mRegisterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp112"
+            android:text="欢迎注册千里科技"
+            android:textColor="#ff4a4a4a"
+            android:textSize="21sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/mInputPhoneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp37"
+            android:layout_marginTop="@dimen/base_dp28"
+            android:layout_marginRight="@dimen/base_dp37"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/base_dp20"
+            android:paddingTop="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp20"
+            android:paddingBottom="@dimen/base_dp10"
+            app:background_normal="#F5F6F7"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintTop_toBottomOf="@+id/mRegisterTitle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textColor="#ff4a4a4a"
+                android:textSize="21sp" />
+
+            <com.trinidad.beansanconstruction.weight.ClearEditText
+                android:id="@+id/mInputPhoneEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/base_dp50"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textColorHint="#ff9b9b9b"
+                android:textSize="@dimen/base_sp19" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/mInputYzmLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp37"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginRight="@dimen/base_dp37"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/base_dp20"
+            android:paddingTop="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp10"
+            android:paddingBottom="@dimen/base_dp10"
+            app:background_normal="#F5F6F7"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintTop_toBottomOf="@+id/mInputPhoneLayout">
+
+            <com.trinidad.beansanconstruction.weight.ClearEditText
+                android:id="@+id/mInputYzmEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textColorHint="#ff9b9b9b"
+                android:textSize="@dimen/base_sp19" />
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/mGetYzmRTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:minWidth="@dimen/base_dp110"
+                android:paddingTop="@dimen/base_dp7"
+                android:paddingBottom="@dimen/base_dp7"
+                android:text="获取验证码"
+                android:textSize="@dimen/base_sp19"
+                app:border_color_normal="#19CC7E"
+                app:border_width_normal="1dp"
+                app:corner_radius="6dp"
+                app:text_color_normal="#19CC7E" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/mInputPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp37"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginRight="@dimen/base_dp37"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/base_dp20"
+            android:paddingTop="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp20"
+            android:paddingBottom="@dimen/base_dp10"
+            app:background_normal="#F5F6F7"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintTop_toBottomOf="@+id/mInputYzmLayout">
+
+
+            <com.trinidad.beansanconstruction.weight.ClearEditText
+                android:id="@+id/mInputPasswordEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/base_dp50"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入登录密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textColorHint="#ff9b9b9b"
+                android:textSize="@dimen/base_sp19" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mRegisterImmediatelyRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dp37"
+            android:layout_marginTop="@dimen/base_dp37"
+            android:layout_marginRight="@dimen/base_dp37"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp13"
+            android:paddingBottom="@dimen/base_dp13"
+            android:text="立即注册"
+            android:textSize="19sp"
+            app:background_normal="#8BE6BF "
+            app:background_selected="#19CC7E"
+            app:corner_radius="@dimen/base_dp6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mInputPasswordLayout"
+            app:text_color_normal="@color/white" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mAgreeCheckedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp34"
+            android:gravity="center_vertical"
+            android:text="请您阅读并同意 炳圣建工用户协议和隐私协议"
+            android:textColor="#ff4a4a4a"
+            android:textSize="12sp"
+            app:icon_normal_left="@mipmap/ic_agree_xiyi_normal"
+            app:icon_selected_left="@mipmap/ic_agree_xiyi_checked"
+            app:layout_constraintLeft_toLeftOf="@+id/mRegisterImmediatelyRTextView"
+            app:layout_constraintRight_toRightOf="@+id/mRegisterImmediatelyRTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mRegisterImmediatelyRTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

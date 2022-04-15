@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="com_colorPrimary">#008577</color>
+    <color name="com_colorPrimaryDark">#00574B</color>
+    <color name="com_colorAccent">#D81B60</color>
+    <color name="com_color_D9261F">#D9261F</color>
+
+
+
+    <color name="com_color_FFFFFF">#ffffff</color>
+    <color name="com_color_000000">#000000</color>
+<!--    透明-->
+    <!--  透明度值  -->
+    <color name="com_color_0D888888">#0D888888</color>
+    <color name="com_color_00000000">#00000000</color>
+    <color name="com_color_f0000000">#f0000000</color>
+    <color name="com_color_99000000">#99000000</color>
+    <color name="com_color_1A000000">#1A000000</color>
+    <color name="com_color_4DFFFFFF">#4DFFFFFF</color>
+    <color name="com_color_222222">#222222</color>
+    <!--    50%透明度 黑色-->
+    <color name="com_color_333333">#333333</color>
+    <color name="com_color_555555">#555555</color>
+    <color name="com_color_666666">#666666</color>
+    <color name="com_color_888888">#888888</color>
+    <color name="com_color_BBBBBB">#BBBBBB</color>
+    <color name="com_color_CCCCCC">#CCCCCC</color>
+    <color name="com_color_F5F5F5">#F5F5F5</color>
+    <color name="com_color_e5e5e5">#e5e5e5</color>
+    <color name="com_color_5c5c5c">#5c5c5c</color>
+    <color name="com_color_22000000">#22000000</color>
+    <color name="com_color_8a8a8a">#8a8a8a</color>
+    <color name="com_color_FA6422">#FA6422</color>
+    <color name="com_color_FF9600">#FF9600</color>
+    <color name="com_color_EE1A1A">#EE1A1A</color>
+    <color name="com_color_EA1D1D">#EA1D1D</color>
+    <color name="com_color_DA2119">#DA2119</color>
+    <color name="com_color_F82323">#F82323</color>
+    <color name="com_color_764A30">#764A30</color>
+    <color name="com_color_DDDDDD">#DDDDDD</color>
+    <color name="com_color_DCDCDC">#DCDCDC</color>
+    <color name="com_color_FFEC1D">#FFEC1D</color>
+    <color name="com_color_BF9064">#BF9064</color>
+    <color name="com_color_A5A5A5">#A5A5A5</color>
+    <color name="com_color_F6F5F5">#F6F5F5</color>
+    <color name="com_color_C11919">#C11919</color>
+    <color name="com_color_D82822">#D82822</color>
+    <color name="com_color_E3302A">#E3302A</color>
+    <color name="com_color_FB4434">#FB4434</color>
+    <color name="com_color_FB4434_8">#33FB4434</color>
+    <color name="com_color_f8f8f8">#f8f8f8</color>
+    <color name="com_color_D9261E">#D9261E</color>
+    <color name="com_color_EF3131">#EF3131</color>
+    <color name="com_color_f5f5f5">#f5f5f5</color>
+    <color name="com_color_EF3B3B">#EF3B3B</color>
+    <color name="com_color_7D7D7D">#7D7D7D</color>
+    <color name="com_color_7f000000">#7f000000</color>
+    <color name="com_color_ffd8d8d8">#ffd8d8d8</color>
+
+
+
+    <!--    toast-->
+    <color name="com_bg_toast">#787676</color>
+    <color name="com_color_4A90E2">#4A90E2</color>
+
+<!--    饺子合辑底部按钮 （选中 未选中）-->
+    <!-- 选中，未选中   -->
+    <color name="com_color_44D2FF">#44D2FF</color>
+    <color name="com_color_999999">#999999</color>
+    <color name="com_color_FFBB44">#FFBB44</color>
+    <color name="com_color_F1FBFF">#F1FBFF</color>
+    <color name="com_color_EEEEEE">#EEEEEE</color>
+
+    <color name="com_color_FFB128">#FFB128</color>
+
+    <color name="com_color_F0F0F0">#F0F0F0</color>
+    <color name="com_color_FF755E">#FF755E</color>
+    <color name="com_color_E41505">#E41505</color>
+    <color name="com_color_99FFFFFF">#99ffffff</color>
+
+
+    <color name="com_color_BE9063">#BE9063</color>
+    <color name="com_color_DB2521">#DB2521</color>
+    <color name="com_color_EF001E">#EF001E</color>
+    <color name="com_color_FFF4F4">#FFF4F4</color>
+    <color name="com_color_F93B3B">#F93B3B</color>
+
+
+</resources>

@@ -8,8 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:layout_height="wrap_content">
 
         <com.trinidad.beansanconstruction.weight.ShadowLayout
             android:id="@+id/mRootShadowLayout"
@@ -19,12 +18,17 @@
             android:paddingTop="@dimen/base_dp15"
             android:paddingEnd="@dimen/base_dp14"
             android:paddingBottom="@dimen/base_dp15"
+            android:layout_marginBottom="7dp"
+            android:background="@color/white"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="@dimen/base_dp15"
+            android:layout_marginStart="@dimen/base_dp15"
             app:radius="6dp"
-            app:shadowBottom="7dp"
+            app:shadowBottom="0dp"
             app:shadowColor="#80C4C4C4"
-            app:shadowLeft="15dp"
-            app:shadowRight="15dp"
-            app:shadowTop="7dp">
+            app:shadowLeft="0dp"
+            app:shadowRight="0dp"
+            app:shadowTop="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

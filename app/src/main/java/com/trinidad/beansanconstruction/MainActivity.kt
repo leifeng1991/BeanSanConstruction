@@ -8,14 +8,20 @@ import android.widget.TabHost
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTabHost
+import androidx.lifecycle.lifecycleScope
 import com.amap.api.location.AMapLocationClient
 import com.moufans.lib_base.base.activity.BaseActivity
+import com.moufans.lib_base.ext.convertReqExecute
 import com.moufans.lib_base.utils.StatusBarUtil
+import com.trinidad.beansanconstruction.constants.AppConstants
 import com.trinidad.beansanconstruction.databinding.ActivityMainBinding
 import com.trinidad.beansanconstruction.event.LoginEvent
+import com.trinidad.beansanconstruction.ext.appApi
 import com.trinidad.beansanconstruction.ui.activity.LoginActivity
 import com.trinidad.beansanconstruction.ui.fragment.HomeFragment
 import com.trinidad.beansanconstruction.ui.fragment.MineFragment
+import com.trinidad.beansanconstruction.utils.SharedPrefUtil
+import kotlinx.coroutines.launch
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -32,6 +38,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun addHeaderView() {
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        getUserInfo()
     }
 
     override fun setStatusBar() {
@@ -65,6 +76,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun processingLogic() {
+    }
+
+    private fun getUserInfo() {
+        lifecycleScope.launch {
+            convertReqExecute({ appApi.findAdminInfo() }, onSuccess = {
+                SharedPrefUtil.put(AppConstants.USER_CODE, it.code)
+            })
+        }
     }
 
     /**

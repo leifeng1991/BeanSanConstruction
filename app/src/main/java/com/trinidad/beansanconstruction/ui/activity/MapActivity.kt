@@ -12,8 +12,12 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.amap.api.location.AMapLocationClient
 import com.amap.api.location.AMapLocationClientOption
@@ -34,6 +38,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import com.google.gson.Gson
 import com.moufans.lib_base.base.activity.BaseActivity
+import com.moufans.lib_base.ext.setOnClickListener2
 import com.moufans.lib_base.utils.LogUtil
 import com.moufans.lib_base.utils.StatusBarUtil
 import com.trinidad.beansanconstruction.R
@@ -56,7 +61,7 @@ open class MapActivity : BaseActivity<ActivityMapBinding>(), AMap.OnCameraChange
     private lateinit var mBottomSheetBehavior: BottomSheetBehavior<RelativeLayout>
     private var cityCode = ""
     private val mLocationAdapter by lazy {
-        LocationAdapter()
+        LocationAdapter(mLongitude, mLatitude)
     }
     private var locationMarker: Marker? = null
     private var mlocation: LatLng? = null
@@ -476,13 +481,13 @@ open class MapActivity : BaseActivity<ActivityMapBinding>(), AMap.OnCameraChange
         mMapView?.onSaveInstanceState(outState)
     }
 
-    override fun onCameraChange(p0: CameraPosition) {
-        LogUtil.e("===================onCameraChange======================")
+    override fun onCameraChange(cameraPosition: CameraPosition) {
+        LogUtil.e("===================onCameraChange================${cameraPosition.target.longitude}====${cameraPosition.target.latitude}======")
 
     }
 
     override fun onCameraChangeFinish(cameraPosition: CameraPosition) {
-        LogUtil.e("===================onCameraChangeFinish======================")
+        LogUtil.e("===================onCameraChangeFinish==============${cameraPosition.target.longitude}====${cameraPosition.target.latitude}====")
         checkinpoint = cameraPosition.target
         searchLatlonPoint?.latitude = checkinpoint?.latitude ?: 0.0
         searchLatlonPoint?.longitude = checkinpoint?.longitude ?: 0.0
@@ -546,10 +551,30 @@ open class MapActivity : BaseActivity<ActivityMapBinding>(), AMap.OnCameraChange
 
     override fun onPoiSearched(poiResult: PoiResult, p1: Int) {
         hideLoading()
+        for (itm in poiResult.pois){
+            LogUtil.e("==============onPoiSearched=============${itm.latLonPoint.longitude}==${itm.latLonPoint.latitude}=")
+        }
         query = null
         poiSearch = null
         if (mDataBinding.mAddressRecyclerView.currentPage == 1) {
-            poiResult.pois.add(PoiItem("", searchLatlonPoint, "", ""))
+            mLocationAdapter.removeAllHeaderView()
+            mLocationAdapter.addHeaderView(View.inflate(this, R.layout.item_location, null).apply {
+                findViewById<TextView>(R.id.mAddressNameTextView).text = "当前位置"
+                findViewById<TextView>(R.id.mDistanceTextView).text = "经度：${searchLatlonPoint!!.longitude} | 纬度：${searchLatlonPoint!!.latitude}"
+                if (searchLatlonPoint!!.longitude == mLongitude && searchLatlonPoint!!.latitude == mLatitude) {
+                    findViewById<ImageView>(R.id.mMapCheckedImageView).visibility = View.VISIBLE
+                    findViewById<LinearLayout>(R.id.mRootLayout).setBackgroundColor(Color.parseColor("#2619CC7E"))
+                } else {
+                    findViewById<ImageView>(R.id.mMapCheckedImageView).visibility = View.GONE
+                    findViewById<LinearLayout>(R.id.mRootLayout).setBackgroundColor(Color.parseColor("#FFFFFFFF"))
+                }
+                setOnClickListener2 {
+                    val itemBean = PoiItem("", searchLatlonPoint, "", "")
+                    val jsonString = Gson().toJson(itemBean)
+                    setResult(RESULT_OK, Intent().apply { putExtra(INTENT_DATA, jsonString) })
+                    finish()
+                }
+            })
         }
         LogUtil.e("===================onPoiSearched===================${poiResult.pois.toArray().contentToString()}===")
         mDataBinding.mAddressRecyclerView.handlerSuccess(mLocationAdapter, poiResult.pois ?: mutableListOf())

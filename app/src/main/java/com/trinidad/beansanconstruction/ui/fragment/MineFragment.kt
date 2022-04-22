@@ -88,6 +88,7 @@ class MineFragment : ViewPageFragment<FragmentMineBinding>() {
             }, onFailure = { _, status, _ ->
                 if (status == -205) {
                     SharedPrefUtil.put(AppConstants.USER_TOKEN, "")
+                    SharedPrefUtil.put(AppConstants.USER_CODE, "")
                     startActivity(LoginActivity.newIntent(requireContext()))
                     requireActivity().finish()
                 }

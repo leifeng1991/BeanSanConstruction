@@ -10,10 +10,16 @@ import com.trinidad.beansanconstruction.utils.StringUtil
 class LocationAdapter(layoutResId: Int = R.layout.item_location, data: MutableList<PoiItem> = mutableListOf()) : BaseAdapter<PoiItem, ItemLocationBinding>(layoutResId, data) {
     override fun convert(holder: BaseDataBindingHolder<ItemLocationBinding>, position: Int, item: PoiItem) {
         holder.dataBinding?.apply {
-            mAddressNameTextView.text = String.format("%s（%s%s）", item.snippet,item.adName, item.businessArea)
-            val distance = if (item.distance < 1000) "${item.distance}m" else "${StringUtil.saveTwoDecimal(StringUtil.div("${item.distance}", "1000", 2))}km"
-            val distanceText = if (item.distance == -1) "距离太远" else "${distance}内"
-            mDistanceTextView.text = "$distanceText | ${item.title}"
+            if (position == 0) {
+                mAddressNameTextView.text = "当前位置"
+                mDistanceTextView.text = "经度：${item.latLonPoint.longitude} | 纬度：${item.latLonPoint.latitude}"
+            } else {
+                mAddressNameTextView.text = String.format("%s（%s%s）", item.snippet, item.adName, item.businessArea)
+                val distance = if (item.distance < 1000) "${item.distance}m" else "${StringUtil.saveTwoDecimal(StringUtil.div("${item.distance}", "1000", 2))}km"
+                val distanceText = if (item.distance == -1) "距离太远" else "${distance}内"
+                mDistanceTextView.text = "$distanceText | ${item.title}"
+            }
+
         }
     }
 }

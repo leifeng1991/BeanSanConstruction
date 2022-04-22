@@ -548,6 +548,9 @@ open class MapActivity : BaseActivity<ActivityMapBinding>(), AMap.OnCameraChange
         hideLoading()
         query = null
         poiSearch = null
+        if (mDataBinding.mAddressRecyclerView.currentPage == 1) {
+            poiResult.pois.add(PoiItem("", searchLatlonPoint, "", ""))
+        }
         LogUtil.e("===================onPoiSearched===================${poiResult.pois.toArray().contentToString()}===")
         mDataBinding.mAddressRecyclerView.handlerSuccess(mLocationAdapter, poiResult.pois ?: mutableListOf())
 //        mDataBinding.mContentTextView.text = poiResult.pois.toArray().contentToString()

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_dp15"
+        android:layout_marginEnd="@dimen/base_dp15"
+        android:layout_marginBottom="@dimen/base_dp15"
+        android:orientation="vertical">
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/base_dp15"
+            app:background_normal="#F7E1C9"
+            app:corner_radius_top_left="@dimen/base_dp7"
+            app:corner_radius_top_right="@dimen/base_dp7"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/mProjectNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卡乐星球项目"
+                android:textColor="#ff703c1f"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/mReplaceTheProjectTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更换项目"
+                android:textColor="#ff703c1f"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/mReplaceTheProjectImageView"
+                android:layout_width="@dimen/base_sp20"
+                android:layout_height="@dimen/base_sp20"
+                android:src="@mipmap/ic_two_line" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/base_dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="产值      "
+                android:textColor="#80000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="¥180,000"
+                android:textColor="#d9000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/base_dp20"
+                android:layout_height="@dimen/base_dp20"
+                android:src="@mipmap/ic_mm_right_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/base_dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="费用支付"
+                android:textColor="#80000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="¥180,000"
+                android:textColor="#d9000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/base_dp20"
+                android:layout_height="@dimen/base_dp20"
+                android:src="@mipmap/ic_mm_right_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/base_dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="利润        "
+                android:textColor="#80000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="¥180,000"
+                android:textColor="#d9000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/base_dp20"
+                android:layout_height="@dimen/base_dp20"
+                android:src="@mipmap/ic_mm_right_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

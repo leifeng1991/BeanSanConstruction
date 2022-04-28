@@ -9,7 +9,7 @@ import com.moufans.lib_base.ext.baseReqExecute
 import com.moufans.lib_base.ext.setOnClickListener2
 import com.moufans.lib_base.utils.ToastUtil
 import com.trinidad.beansanconstruction.R
-import com.trinidad.beansanconstruction.api.RequestParamJsonBean
+import com.trinidad.beansanconstruction.api.param.RequestParamJsonBean
 import com.trinidad.beansanconstruction.databinding.ActivityChangePasswordBinding
 import com.trinidad.beansanconstruction.ext.appApi
 import com.trinidad.beansanconstruction.utils.CheckUtils

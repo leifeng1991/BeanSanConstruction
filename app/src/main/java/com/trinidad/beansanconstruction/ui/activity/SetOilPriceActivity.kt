@@ -1,11 +1,7 @@
 package com.trinidad.beansanconstruction.ui.activity
 
-import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
 import com.github.gzuliyujiang.wheelpicker.OptionPicker
 import com.google.gson.Gson
@@ -14,7 +10,7 @@ import com.moufans.lib_base.ext.convertReqExecute
 import com.moufans.lib_base.ext.setOnClickListener2
 import com.moufans.lib_base.utils.ToastUtil
 import com.trinidad.beansanconstruction.R
-import com.trinidad.beansanconstruction.api.RequestParamJsonBean
+import com.trinidad.beansanconstruction.api.param.RequestParamJsonBean
 import com.trinidad.beansanconstruction.api.bean.OilPriceListBean
 import com.trinidad.beansanconstruction.databinding.ActivitySetOilPriceBinding
 import com.trinidad.beansanconstruction.ext.appApi
@@ -23,7 +19,6 @@ import com.trinidad.beansanconstruction.utils.StringUtil
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
-import java.util.*
 
 class SetOilPriceActivity : BaseActivity<ActivitySetOilPriceBinding>() {
     // 油价

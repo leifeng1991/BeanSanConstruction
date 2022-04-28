@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_dp15"
+        android:layout_marginTop="7.5dp"
+        android:layout_marginEnd="@dimen/base_dp15"
+        android:layout_marginBottom="7.5dp"
+        android:padding="@dimen/base_dp15"
+        app:background_normal="@color/white"
+        app:corner_radius="@dimen/base_dp4">
+
+        <ImageView
+            android:id="@+id/mUserIconImageView"
+            android:layout_width="@dimen/base_dp58"
+            android:layout_height="@dimen/base_dp58"
+            android:layout_marginStart="@dimen/base_dp20"
+            android:src="@mipmap/ic_default_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mUserNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp60"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="姓名：欧阳娜娜"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mUserIconImageView" />
+
+        <TextView
+            android:id="@+id/mUserPhoneTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp60"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="电话：13607726688"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mUserNameTextView" />
+
+        <TextView
+            android:id="@+id/mUseRoleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp60"
+            android:layout_marginTop="@dimen/base_dp4"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="角色：运输土方司机"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mUserPhoneTextView" />
+
+        <TextView
+            android:id="@+id/mUseIdTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp60"
+            android:layout_marginTop="@dimen/base_dp4"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="用户ID：10000"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mUseRoleTextView" />
+
+        <TextView
+            android:id="@+id/mApplyTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:paddingStart="@dimen/base_dp20"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="申请时间:  5月31日 21:01"
+            android:textColor="#ff9b9b9b"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/mUseIdTextView" />
+
+        <View
+            android:id="@+id/mLineView_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:background="#1A000000"
+            app:layout_constraintTop_toBottomOf="@+id/mApplyTimeTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:paddingStart="@dimen/base_dp20"
+            android:text="详情"
+            android:textColor="#ff9b9b9b"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLineView_1"
+            tools:ignore="RtlSymmetry" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mLeftRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginEnd="@dimen/base_dp15"
+            android:layout_marginBottom="@dimen/base_dp1"
+            android:gravity="center"
+            android:minWidth="@dimen/base_dp84"
+            android:paddingLeft="@dimen/base_dp5"
+            android:paddingTop="@dimen/base_dp3"
+            android:paddingRight="@dimen/base_dp5"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="已开通"
+            android:textSize="15sp"
+            app:background_normal="@color/white"
+            app:border_color_normal="#FA6400"
+            app:border_color_unable="#40000000"
+            app:border_width_normal="@dimen/base_dp1"
+            app:corner_radius="@dimen/base_dp3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mRightRTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mLineView_1"
+            app:text_color_normal="#FA6400"
+            app:text_color_unable="#40000000" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mRightRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginBottom="@dimen/base_dp1"
+            android:gravity="center"
+            android:minWidth="@dimen/base_dp84"
+            android:paddingLeft="@dimen/base_dp5"
+            android:paddingTop="@dimen/base_dp3"
+            android:paddingRight="@dimen/base_dp5"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="编辑"
+            android:textColor="#ff19cc7e"
+            android:textSize="15sp"
+            app:background_normal="@color/white"
+            app:border_color_normal="#ff19cc7e"
+            app:border_color_unable="#40000000"
+            app:border_width_normal="@dimen/base_dp1"
+            app:corner_radius="@dimen/base_dp3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLineView_1"
+            app:text_color_normal="#ff19cc7e"
+            app:text_color_unable="#40000000" />
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

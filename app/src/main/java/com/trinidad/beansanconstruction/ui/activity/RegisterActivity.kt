@@ -2,8 +2,6 @@ package com.trinidad.beansanconstruction.ui.activity
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
@@ -12,13 +10,12 @@ import com.google.gson.Gson
 import com.moufans.lib_base.base.activity.BaseActivity
 import com.moufans.lib_base.ext.baseReqExecute
 import com.moufans.lib_base.ext.convertReqExecute
-import com.moufans.lib_base.utils.DataStoreHelper
 import com.moufans.lib_base.utils.LogUtil
 import com.moufans.lib_base.utils.StatusBarUtil
 import com.moufans.lib_base.utils.ToastUtil
 import com.trinidad.beansanconstruction.MainActivity
 import com.trinidad.beansanconstruction.R
-import com.trinidad.beansanconstruction.api.RequestParamJsonBean
+import com.trinidad.beansanconstruction.api.param.RequestParamJsonBean
 import com.trinidad.beansanconstruction.constants.AppConstants
 import com.trinidad.beansanconstruction.databinding.ActivityRegisterBinding
 import com.trinidad.beansanconstruction.ext.appApi

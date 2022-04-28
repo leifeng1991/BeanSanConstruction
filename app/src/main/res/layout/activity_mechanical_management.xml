@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.activity.MechanicalManagementActivity">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#ff13a666"
+                app:layout_constraintBottom_toBottomOf="@+id/mMenuLayout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.ruffian.library.widget.RLinearLayout
+                android:id="@+id/mMenuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp15"
+                android:layout_marginTop="@dimen/base_dp40"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/base_dp25"
+                android:paddingBottom="@dimen/base_dp10"
+                app:background_normal="#D0FCE3"
+                app:corner_radius_top_left="@dimen/base_dp15"
+                app:corner_radius_top_right="@dimen/base_dp15"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dp40"
+                        android:layout_height="@dimen/base_dp40"
+                        android:src="@mipmap/ic_cost_types" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="费用类型"
+                        android:textColor="#ff13a666"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dp40"
+                        android:layout_height="@dimen/base_dp40"
+                        android:src="@mipmap/ic_cost_types" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="费用类型"
+                        android:textColor="#ff13a666"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dp40"
+                        android:layout_height="@dimen/base_dp40"
+                        android:src="@mipmap/ic_cost_types" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="费用类型"
+                        android:textColor="#ff13a666"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dp40"
+                        android:layout_height="@dimen/base_dp40"
+                        android:src="@mipmap/ic_cost_types" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="费用类型"
+                        android:textColor="#ff13a666"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.ruffian.library.widget.RLinearLayout>
+
+            <View
+                android:id="@+id/mLineView_1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#F7E1C9"
+                app:layout_constraintTop_toBottomOf="@+id/mMenuLayout" />
+
+            <com.ruffian.library.widget.RConstraintLayout
+                android:id="@+id/mProjectOneLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp15"
+                android:layout_marginTop="@dimen/base_dp15"
+                android:layout_marginEnd="3dp"
+                android:paddingStart="@dimen/base_dp15"
+                android:paddingTop="@dimen/base_dp8"
+                android:paddingEnd="@dimen/base_sp13"
+                android:paddingBottom="@dimen/base_dp6"
+                app:background_normal="@color/white"
+                app:corner_radius="@dimen/base_dp7"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mProjectTwoLayout"
+                app:layout_constraintTop_toBottomOf="@+id/mLineView_1">
+
+                <TextView
+                    android:id="@+id/mTitleTextView_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="项目数量"
+                    android:textColor="#80000000"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mNumberOfProjectsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp8"
+                    android:text="100"
+                    android:textColor="#d9000000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTitleTextView_1" />
+
+                <LinearLayout
+                    android:id="@+id/mNumberOfProjectsDesLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:text="详情"
+                        android:textColor="#40000000"
+                        android:textSize="11sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dp20"
+                        android:layout_height="@dimen/base_dp20"
+                        android:src="@mipmap/ic_mm_right_arrow" />
+                </LinearLayout>
+            </com.ruffian.library.widget.RConstraintLayout>
+
+            <com.ruffian.library.widget.RConstraintLayout
+                android:id="@+id/mProjectTwoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="@dimen/base_dp15"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:paddingStart="@dimen/base_dp15"
+                android:paddingTop="@dimen/base_dp8"
+                android:paddingEnd="@dimen/base_sp13"
+                android:paddingBottom="@dimen/base_dp6"
+                app:background_normal="@color/white"
+                app:corner_radius="@dimen/base_dp7"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/mProjectOneLayout"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mLineView_1">
+
+                <TextView
+                    android:id="@+id/mTitleTextView_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车辆数量"
+                    android:textColor="#80000000"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mNumberOfVehiclesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp8"
+                    android:text="100"
+                    android:textColor="#d9000000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTitleTextView_2" />
+
+                <LinearLayout
+                    android:id="@+id/mNumberOfVehiclesDesLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:text="详情"
+                        android:textColor="#40000000"
+                        android:textSize="11sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dp20"
+                        android:layout_height="@dimen/base_dp20"
+                        android:src="@mipmap/ic_mm_right_arrow" />
+                </LinearLayout>
+            </com.ruffian.library.widget.RConstraintLayout>
+
+            <com.ruffian.library.widget.RConstraintLayout
+                android:id="@+id/mProjectThreeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp15"
+                android:layout_marginTop="@dimen/base_dp15"
+                android:layout_marginEnd="3dp"
+                android:paddingStart="@dimen/base_dp15"
+                android:paddingTop="@dimen/base_dp8"
+                android:paddingEnd="@dimen/base_sp13"
+                android:paddingBottom="@dimen/base_dp6"
+                app:background_normal="@color/white"
+                app:corner_radius="@dimen/base_dp7"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mProjectFourLayout"
+                app:layout_constraintTop_toBottomOf="@+id/mProjectOneLayout">
+
+                <TextView
+                    android:id="@+id/mTitleTextView_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车队数量"
+                    android:textColor="#80000000"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mNumberOfTeamTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp8"
+                    android:text="100"
+                    android:textColor="#d9000000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTitleTextView_3" />
+
+                <LinearLayout
+                    android:id="@+id/mNumberOfTeamDesLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:text="详情"
+                        android:textColor="#40000000"
+                        android:textSize="11sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dp20"
+                        android:layout_height="@dimen/base_dp20"
+                        android:src="@mipmap/ic_mm_right_arrow" />
+                </LinearLayout>
+            </com.ruffian.library.widget.RConstraintLayout>
+
+            <com.ruffian.library.widget.RConstraintLayout
+                android:id="@+id/mProjectFourLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="@dimen/base_dp15"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:paddingStart="@dimen/base_dp15"
+                android:paddingTop="@dimen/base_dp8"
+                android:paddingEnd="@dimen/base_sp13"
+                android:paddingBottom="@dimen/base_dp6"
+                app:background_normal="@color/white"
+                app:corner_radius="@dimen/base_dp7"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/mProjectThreeLayout"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mProjectOneLayout">
+
+                <TextView
+                    android:id="@+id/mTitleTextView_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="员工数量"
+                    android:textColor="#80000000"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mNumberOfEmployeesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp8"
+                    android:text="100"
+                    android:textColor="#d9000000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTitleTextView_4" />
+
+                <LinearLayout
+                    android:id="@+id/mNumberOfEmployeesDesLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:text="详情"
+                        android:textColor="#40000000"
+                        android:textSize="11sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dp20"
+                        android:layout_height="@dimen/base_dp20"
+                        android:src="@mipmap/ic_mm_right_arrow" />
+                </LinearLayout>
+            </com.ruffian.library.widget.RConstraintLayout>
+
+            <TextView
+                android:id="@+id/mProjectOperationTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp15"
+                android:layout_marginTop="@dimen/base_dp15"
+                android:text="项目经营情况"
+                android:textColor="#80000000"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mProjectThreeLayout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mProjectOperationRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

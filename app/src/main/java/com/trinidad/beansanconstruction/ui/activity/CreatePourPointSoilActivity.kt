@@ -12,7 +12,7 @@ import com.moufans.lib_base.ext.baseReqExecute
 import com.moufans.lib_base.ext.setOnClickListener2
 import com.moufans.lib_base.utils.ToastUtil
 import com.trinidad.beansanconstruction.R
-import com.trinidad.beansanconstruction.api.RequestParamJsonBean
+import com.trinidad.beansanconstruction.api.param.RequestParamJsonBean
 import com.trinidad.beansanconstruction.api.bean.ProjectListDataBean
 import com.trinidad.beansanconstruction.databinding.ActivityCreatePourPointSoilBinding
 import com.trinidad.beansanconstruction.ext.appApi

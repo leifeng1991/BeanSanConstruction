@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_dp15"
+        android:layout_marginTop="7.5dp"
+        android:layout_marginRight="@dimen/base_dp15"
+        android:layout_marginBottom="7.5dp"
+        android:padding="@dimen/base_dp15"
+        app:background_normal="@color/white"
+        app:corner_radius="@dimen/base_dp4">
+
+        <TextView
+            android:id="@+id/mShopNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="金手指维修东环店"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mShopLocationTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mShopLocationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位"
+            android:textColor="#80000000"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mShopAddressTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:text="地址："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopNameTextView" />
+
+        <TextView
+            android:id="@+id/mShopAddressTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:text="广西省柳州市博园大道20附近A地块 2号楼-16-06号"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mShopAddressTitleTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopNameTextView" />
+
+        <TextView
+            android:id="@+id/mShopUserTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="联系人："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopAddressTextView" />
+
+        <TextView
+            android:id="@+id/mShopUserTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="诸葛亮"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mShopUserTitleTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopAddressTextView" />
+
+        <TextView
+            android:id="@+id/mShopPhoneTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="联系电话："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopUserTextView" />
+
+        <TextView
+            android:id="@+id/mShopPhoneTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="13607726688"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mShopPhoneTitleTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopUserTextView" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mChooseRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginEnd="@dimen/base_dp17"
+            android:layout_marginBottom="@dimen/base_dp1"
+            android:paddingLeft="@dimen/base_dp27"
+            android:paddingTop="@dimen/base_dp3"
+            android:paddingRight="@dimen/base_dp27"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="选择"
+            android:textColor="#ff19cc7e"
+            android:textSize="15sp"
+            app:background_normal="@color/white"
+            app:border_color_normal="#ff19cc7e"
+            app:border_width_normal="@dimen/base_dp1"
+            app:corner_radius="@dimen/base_dp3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopPhoneTextView" />
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

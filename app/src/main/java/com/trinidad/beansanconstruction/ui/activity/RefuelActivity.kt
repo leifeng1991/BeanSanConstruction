@@ -7,7 +7,6 @@ import android.text.TextUtils
 import android.text.TextWatcher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.lifecycleScope
-import com.amap.api.services.core.PoiItem
 import com.github.gzuliyujiang.wheelpicker.OptionPicker
 import com.google.gson.Gson
 import com.moufans.lib_base.base.activity.BaseActivity
@@ -15,7 +14,7 @@ import com.moufans.lib_base.ext.convertReqExecute
 import com.moufans.lib_base.ext.setOnClickListener2
 import com.moufans.lib_base.utils.ToastUtil
 import com.trinidad.beansanconstruction.R
-import com.trinidad.beansanconstruction.api.RequestParamJsonBean
+import com.trinidad.beansanconstruction.api.param.RequestParamJsonBean
 import com.trinidad.beansanconstruction.api.bean.OilPriceListBean
 import com.trinidad.beansanconstruction.api.bean.SelectOneDataBean
 import com.trinidad.beansanconstruction.databinding.ActivityRefuelBinding

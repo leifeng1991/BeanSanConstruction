@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.activity.MaintainOrderActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#FA6400 "
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp17"
+                android:text="选择维修时间"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mSelectTimeRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/base_dp47"
+            android:paddingLeft="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp10"
+            android:textSize="@dimen/base_dp15"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="6dp"
+            app:text_color_normal="#333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#FA6400 "
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp17"
+                android:text="选择维修店铺"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mSelectRepairShopRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/base_dp47"
+            android:paddingLeft="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp10"
+            android:textSize="@dimen/base_dp15"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="6dp"
+            app:text_color_normal="#333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#FA6400 "
+                android:textSize="15sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp17"
+                android:text="选择车牌"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mSelectNumberPlateRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/base_dp47"
+            android:paddingLeft="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp10"
+            android:textSize="@dimen/base_dp15"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="6dp"
+            app:text_color_normal="#333333" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/base_dp20"
+            android:text="车辆编号（无车牌车辆请输入编号）"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp" />
+
+        <com.ruffian.library.widget.REditText
+            android:id="@+id/mInputNumberPlateREditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:gravity="left|top|center_vertical"
+            android:minHeight="@dimen/base_dp47"
+            android:paddingLeft="@dimen/base_dp10"
+            android:paddingRight="@dimen/base_dp10"
+            android:textSize="@dimen/base_dp15"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="6dp"
+            app:text_color_normal="#333333"
+            tools:ignore="RtlHardcoded" />
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:paddingLeft="@dimen/base_dp15"
+            android:paddingRight="@dimen/base_dp15"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1dp"
+            app:corner_radius="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="维修费用："
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/mClockInScopeEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:minWidth="@dimen/base_dp20"
+                android:text="0"
+                android:textColor="#fffa6400"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="#ff9b9b9b"
+                android:textSize="15sp" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:text="维修描述"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/mContentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp27"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="@dimen/base_dp27"
+            android:gravity="left|top"
+            android:hint="请输入维修描述"
+            android:minHeight="@dimen/base_dp80"
+            android:padding="@dimen/base_dp10"
+            android:textColor="#d9000000"
+            android:textSize="15sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mSubmittedRTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp15"
+            android:text="提交审核"
+            android:textSize="15sp"
+            app:background_normal="#19CC7E"
+            app:text_color_normal="@color/white" />
+    </LinearLayout>
+</layout>

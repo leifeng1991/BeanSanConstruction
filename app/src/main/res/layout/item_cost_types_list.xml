@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_dp15"
+        android:layout_marginTop="7.5dp"
+        android:layout_marginEnd="@dimen/base_dp15"
+        android:layout_marginBottom="7.5dp"
+        android:padding="@dimen/base_dp15"
+        app:background_normal="@color/white"
+        app:corner_radius="@dimen/base_dp4">
+
+        <TextView
+            android:id="@+id/mTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="汽车运输"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/base_dp20"
+            android:text="¥50"
+            android:textColor="#fffa6400"
+            android:textSize="15sp"
+            app:layout_constraintRight_toLeftOf="@+id/mUnitTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mUnitTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每车"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mCreateTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="创建日期：2021-5-31"
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/mTitleTextView" />
+
+        <TextView
+            android:id="@+id/mCommissionRateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="提成比例：10%"
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/mCreateTimeTextView" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mLeftRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp30"
+            android:layout_marginEnd="@dimen/base_dp15"
+            android:layout_marginBottom="@dimen/base_dp1"
+            android:paddingLeft="@dimen/base_dp19"
+            android:paddingTop="@dimen/base_dp3"
+            android:paddingRight="@dimen/base_dp19"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="编辑"
+            android:textColor="#ff19cc7e"
+            android:textSize="15sp"
+            app:background_normal="@color/white"
+            app:border_color_normal="#ff19cc7e"
+            app:border_width_normal="@dimen/base_dp1"
+            app:corner_radius="@dimen/base_dp3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mRightRTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mCommissionRateTextView" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mRightRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp30"
+            android:layout_marginBottom="@dimen/base_dp1"
+            android:paddingLeft="@dimen/base_dp27"
+            android:paddingTop="@dimen/base_dp3"
+            android:paddingRight="@dimen/base_dp27"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="选择"
+            android:textColor="#ff19cc7e"
+            android:textSize="15sp"
+            app:background_normal="@color/white"
+            app:border_color_normal="#ff19cc7e"
+            app:border_width_normal="@dimen/base_dp1"
+            app:corner_radius="@dimen/base_dp3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mCommissionRateTextView" />
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

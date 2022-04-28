@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.CostInputActivity">
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/mSelectProjectLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp15"
+            android:layout_marginTop="@dimen/base_dp20"
+            android:layout_marginEnd="@dimen/base_dp15"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/base_dp15"
+            app:border_color_normal="#19CC7E"
+            app:border_width_normal="1.5dp"
+            app:corner_radius="@dimen/base_dp3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/mProjectNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请选择项目"
+                android:textColor="#d9000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_new_right_arrow" />
+        </com.ruffian.library.widget.RLinearLayout>
+
+        <TextView
+            android:id="@+id/mTaskDateTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp15"
+            android:layout_marginTop="@dimen/base_dp32"
+            android:text="任务日期"
+            android:textColor="#80000000"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mSelectProjectLayout" />
+
+        <TextView
+            android:id="@+id/mTaskDateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp37"
+            android:layout_marginEnd="@dimen/base_dp15"
+            android:drawableRight="@mipmap/ic_new_right_arrow"
+            android:text="2022-05-01"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mTaskDateTitleTextView"
+            app:layout_constraintLeft_toRightOf="@+id/mTaskDateTitleTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mTaskDateTitleTextView" />
+
+        <TextView
+            android:id="@+id/mClassesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp15"
+            android:layout_marginTop="@dimen/base_dp32"
+            android:text="班次"
+            android:textColor="#80000000"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mTaskDateTitleTextView" />
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/mClassesTextView"
+            app:layout_constraintLeft_toRightOf="@+id/mClassesTextView"
+            app:layout_constraintTop_toTopOf="@+id/mClassesTextView">
+
+            <com.ruffian.library.widget.RRadioButton
+                android:id="@+id/mDayShiftRRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_dp36"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingStart="@dimen/base_dp27"
+                android:paddingTop="@dimen/base_dp3"
+                android:paddingEnd="@dimen/base_dp27"
+                android:paddingBottom="@dimen/base_dp3"
+                android:text="白班"
+                android:textSize="@dimen/base_sp15"
+                app:background_checked="#19CC7E"
+                app:background_normal="#fff"
+                app:border_color_normal="#19CC7E"
+                app:border_width_normal="1dp"
+                app:corner_radius="3dp"
+                app:text_color_checked="@color/white"
+                app:text_color_normal="#19CC7E" />
+
+            <com.ruffian.library.widget.RRadioButton
+                android:id="@+id/mNightShiftRRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/base_dp36"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingStart="@dimen/base_dp27"
+                android:paddingTop="@dimen/base_dp3"
+                android:paddingEnd="@dimen/base_dp27"
+                android:paddingBottom="@dimen/base_dp3"
+                android:text="夜班"
+                android:textSize="@dimen/base_sp15"
+                app:background_checked="#19CC7E"
+                app:background_normal="#fff"
+                app:border_color_normal="#19CC7E"
+                app:border_width_normal="1dp"
+                app:corner_radius="3dp"
+                app:text_color_checked="@color/white"
+                app:text_color_normal="#19CC7E" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/mLineView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_dp5"
+            android:layout_marginTop="@dimen/base_dp30"
+            android:background="#F6F6F6"
+            app:layout_constraintTop_toBottomOf="@+id/mClassesTextView" />
+
+        <TextView
+            android:id="@+id/mCostTypesTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp15"
+            android:layout_marginTop="@dimen/base_dp30"
+            android:text="费用类型"
+            android:textColor="#80000000"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLineView" />
+
+        <TextView
+            android:id="@+id/mSprinklerStationShiftFeeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp15"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:layout_marginEnd="@dimen/base_dp15"
+            android:drawableRight="@mipmap/ic_new_right_arrow"
+            android:text="洒水车台班费"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mCostTypesTitleTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

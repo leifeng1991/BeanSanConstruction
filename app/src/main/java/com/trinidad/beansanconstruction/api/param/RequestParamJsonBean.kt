@@ -1,4 +1,4 @@
-package com.trinidad.beansanconstruction.api
+package com.trinidad.beansanconstruction.api.param
 
 class RequestParamJsonBean {
     var phone: String? = null

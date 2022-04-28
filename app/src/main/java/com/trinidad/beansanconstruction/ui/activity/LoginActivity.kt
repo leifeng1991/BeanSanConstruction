@@ -8,14 +8,12 @@ import com.google.gson.Gson
 import com.moufans.lib_base.base.activity.BaseActivity
 import com.moufans.lib_base.ext.baseReqExecute
 import com.moufans.lib_base.ext.convertReqExecute
-import com.moufans.lib_base.ext.rawReqExecute
 import com.moufans.lib_base.ext.setOnClickListener2
-import com.moufans.lib_base.utils.DataStoreHelper
 import com.moufans.lib_base.utils.LogUtil
 import com.moufans.lib_base.utils.StatusBarUtil
 import com.trinidad.beansanconstruction.MainActivity
 import com.trinidad.beansanconstruction.R
-import com.trinidad.beansanconstruction.api.RequestParamJsonBean
+import com.trinidad.beansanconstruction.api.param.RequestParamJsonBean
 import com.trinidad.beansanconstruction.constants.AppConstants
 import com.trinidad.beansanconstruction.databinding.ActivityLoginBinding
 import com.trinidad.beansanconstruction.ext.appApi

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_dp15"
+        android:layout_marginTop="7.5dp"
+        android:layout_marginEnd="@dimen/base_dp15"
+        android:layout_marginBottom="7.5dp"
+        android:padding="@dimen/base_dp15"
+        app:background_normal="@color/white"
+        app:corner_radius="@dimen/base_dp4">
+
+        <TextView
+            android:id="@+id/mShopNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="金手指维修东环店"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mDesTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mDesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情"
+            android:textColor="#80000000"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mMaintainDateTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp13"
+            android:text="维修日期："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopNameTextView" />
+
+        <TextView
+            android:id="@+id/mMaintainDateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp13"
+            android:text="2022-09-25"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mMaintainDateTitleTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mShopNameTextView" />
+
+        <TextView
+            android:id="@+id/mApplicationDateTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="申请时间："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mMaintainDateTextView" />
+
+        <TextView
+            android:id="@+id/mApplicationDateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="2022-10-01 10：3"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mApplicationDateTitleTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mMaintainDateTextView" />
+
+        <TextView
+            android:id="@+id/mProposerTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="申请人："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mProposerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mApplicationDateTextView" />
+
+        <TextView
+            android:id="@+id/mProposerTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="欧阳娜娜"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/mProposerTitleTextView"
+            app:layout_constraintRight_toLeftOf="@+id/mNumberPlateTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mApplicationDateTextView" />
+
+        <TextView
+            android:id="@+id/mNumberPlateTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="车牌："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/mProposerTextView"
+            app:layout_constraintRight_toLeftOf="@+id/mNumberPlateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mApplicationDateTextView" />
+
+        <TextView
+            android:id="@+id/mNumberPlateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="桂B WU888"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mNumberPlateTitleTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mApplicationDateTextView" />
+
+        <TextView
+            android:id="@+id/mApplyContentTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="提交维修内容："
+            android:textColor="#ffb4b4b4"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/mProposerTextView" />
+
+        <TextView
+            android:id="@+id/mApplyContentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="发动机抖动，更换发动机机脚橡胶支座，发动机异响得到解决"
+            android:textColor="#d9000000"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/mApplyContentTitleTextView" />
+
+
+        <TextView
+            android:id="@+id/mPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥1980"
+            android:textColor="#fffa6400"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mRightRTextView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mRightRTextView" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mLeftRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp30"
+            android:layout_marginEnd="@dimen/base_dp15"
+            android:layout_marginBottom="@dimen/base_dp1"
+            android:minWidth="@dimen/base_dp84"
+            android:paddingLeft="@dimen/base_dp5"
+            android:paddingTop="@dimen/base_dp3"
+            android:paddingRight="@dimen/base_dp5"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="已开通"
+            android:textSize="15sp"
+            app:background_normal="@color/white"
+            app:border_color_normal="#FA6400"
+            app:border_color_unable="#40000000"
+            app:border_width_normal="@dimen/base_dp1"
+            app:corner_radius="@dimen/base_dp3"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mRightRTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mApplyContentTextView"
+            app:text_color_normal="#FA6400"
+            app:text_color_unable="#40000000" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mRightRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp30"
+            android:layout_marginBottom="@dimen/base_dp1"
+            android:minWidth="@dimen/base_dp84"
+            android:paddingLeft="@dimen/base_dp5"
+            android:paddingTop="@dimen/base_dp3"
+            android:gravity="center"
+            android:paddingRight="@dimen/base_dp5"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="编辑"
+            android:textColor="#ff19cc7e"
+            android:textSize="15sp"
+            app:background_normal="@color/white"
+            app:border_color_normal="#ff19cc7e"
+            app:border_color_unable="#40000000"
+            app:border_width_normal="@dimen/base_dp1"
+            app:corner_radius="@dimen/base_dp3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mApplyContentTextView"
+            app:text_color_normal="#ff19cc7e"
+            app:text_color_unable="#40000000" />
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

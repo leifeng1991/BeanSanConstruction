@@ -9,18 +9,31 @@
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/drawable/selector_main_tab_scan.xml" value="0.186" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_authorize_login.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_change_password.xml" value="0.264" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_choose_car.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_cost_input.xml" value="0.1" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_cost_query.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_cost_types.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_create_cost_types.xml" value="0.1" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_create_pour_point_soil.xml" value="0.25" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_create_project.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_edit_profile.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_join_company.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_maintain_des.xml" value="0.1" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_maintain_management.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_maintain_order.xml" value="0.1" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_maintenance_order_review.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_map.xml" value="0.152" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_mechanical_management.xml" value="0.1" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_people.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_people_management.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_project_list.xml" value="0.23541666666666666" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_project_management.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_refuel.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_refuel_record.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_register.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_repair_shop.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_rich_scan.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_route_settings.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/activity_route_settings_list.xml" value="0.12407407407407407" />
@@ -32,11 +45,18 @@
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/fragment_mine.xml" value="0.176" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/fragment_new_home.xml" value="0.2390625" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/fragment_refuel_record_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_choose_car_list.xml" value="0.2" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_cost_types_list.xml" value="0.264" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_home_feature_list.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_join_company.xml" value="0.4" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_location.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_maintenance_order_review_list.xml" value="0.1" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_people_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_people_management_list.xml" value="0.1" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_project_list.xml" value="0.25" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_project_operation_list.xml" value="0.2" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_refuel_record_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_repair_shop_list.xml" value="0.1" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_role_list.xml" value="0.25364583333333335" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/item_route_settings_list.xml" value="0.264" />
         <entry key="..\:/source/BeanSanConstruction/app/src/main/res/layout/layout_main_tab_item_view.xml" value="0.4" />

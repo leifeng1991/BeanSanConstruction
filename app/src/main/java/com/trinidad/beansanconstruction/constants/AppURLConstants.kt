@@ -67,5 +67,29 @@ interface AppURLConstants {
 
         // 分页查询加油记录
         const val PHONE_OIL_PRICE_LOG_SELECT = "phone/oilPriceLog/select"
+
+        // 维修店列表
+        const val PHONE_REPAIR_SELECT = "phone/repair/select"
+
+        // 车辆下拉数据
+        const val PHONE_CAR_INFO_SEL_LIST = "phone/carInfo/selList"
+
+        // 创建维修订单
+        const val PHONE_REPAIR_COST_ADD = "phone/repairCost/add"
+
+        // 维修订单列表
+        const val PHONE_REPAIR_COST_SELECT = "phone/repairCost/select"
+
+        // 维修订单详情
+        const val PHONE_REPAIR_COST_SELECT_ONE = "phone/repairCost/selectOne/{id}"
+
+        // 维修订单审批
+        const val PHONE_REPAIR_COST_UPDATE = "phone/repairCost/update"
+
+        // 人员管理列表
+        const val PHONE_LOGON_LOG_SELECT = "phone/logonLog/select"
+
+        // 人员管理审批
+        const val PHONE_LOGON_LOG_UPDATE = "phone/logonLog/update"
     }
 }

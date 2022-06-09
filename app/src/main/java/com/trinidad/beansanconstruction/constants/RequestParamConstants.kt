@@ -10,5 +10,10 @@ internal interface RequestParamConstants {
         const val KEYWORD = "keyWord"
         const val KEY = "key"
         const val TYPE = "type"
+        const val PID = "pid"
+        const val CAR_ID = "carId"
+        const val YEAR_MONTH = "yearMonth"
+        const val ID = "id"
+        const val YEAR = "year"
     }
 }

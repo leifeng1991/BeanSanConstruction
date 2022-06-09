@@ -14,94 +14,186 @@
         android:layout_marginTop="@dimen/base_dp10"
         android:layout_marginEnd="@dimen/base_dp15"
         android:layout_marginBottom="@dimen/base_dp10"
-        android:paddingTop="@dimen/base_dp20"
-        android:paddingBottom="@dimen/base_dp20"
+        android:padding="@dimen/base_dp15"
         app:background_normal="@color/white"
         app:corner_radius="@dimen/base_dp4">
 
-        <TextView
-            android:id="@+id/mProjectTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="@dimen/base_dp15"
-            android:paddingEnd="@dimen/base_dp15"
-            android:text="项目：龙翔产业园"
-            android:textColor="#ff9b9b9b"
-            android:textSize="15sp"
+        <ImageView
+            android:id="@+id/mUserIconImageView"
+            android:layout_width="@dimen/base_dp70"
+            android:layout_height="@dimen/base_dp70"
+            android:layout_marginStart="@dimen/base_dp20"
+            android:src="@mipmap/ic_item_car"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/mCostTypesTextView"
-            android:layout_width="match_parent"
+            android:id="@+id/mPlateNumberTextView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/base_dp10"
-            android:paddingStart="@dimen/base_dp15"
-            android:paddingEnd="@dimen/base_dp15"
-            android:text="费用类型：洒水车临时工"
+            android:layout_marginStart="@dimen/base_dp49"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="车牌：桂B WU778"
             android:textColor="#ff9b9b9b"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@+id/mProjectTextView" />
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toLeftOf="@+id/mPlateStateTextView"
+            app:layout_constraintTop_toTopOf="@+id/mUserIconImageView" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/mPlateStateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/base_dp8"
+            android:paddingTop="@dimen/base_dp3"
+            android:paddingEnd="@dimen/base_dp8"
+            android:paddingBottom="@dimen/base_dp3"
+            android:text="自有"
+            android:textSize="10sp"
+            app:background_normal="#19CC7E"
+            app:corner_radius_bottom_left="@dimen/base_dp2"
+            app:corner_radius_top_left="@dimen/base_dp2"
+            app:layout_constraintBottom_toBottomOf="@+id/mPlateNumberTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mPlateNumberTextView"
+            app:text_color_normal="@color/white" />
 
         <TextView
-            android:id="@+id/mConstructionUnitCostTextView"
-            android:layout_width="match_parent"
+            android:id="@+id/mSerialNumberTextView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/base_dp10"
-            android:paddingStart="@dimen/base_dp15"
-            android:paddingEnd="@dimen/base_dp15"
-            android:text="费用单价：¥200 元/每次"
+            android:layout_marginStart="@dimen/base_dp49"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="编号：N0 188"
             android:textColor="#ff9b9b9b"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@+id/mCostTypesTextView" />
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mPlateNumberTextView" />
 
         <TextView
-            android:id="@+id/mQuantityTextView"
-            android:layout_width="match_parent"
+            android:id="@+id/mVehicleModelTextView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/base_dp10"
-            android:paddingStart="@dimen/base_dp15"
-            android:paddingEnd="@dimen/base_dp15"
-            android:text="数量：100"
+            android:layout_marginStart="@dimen/base_dp49"
+            android:layout_marginTop="@dimen/base_dp4"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="车型：运输土方司机"
             android:textColor="#ff9b9b9b"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@+id/mConstructionUnitCostTextView" />
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mSerialNumberTextView" />
 
         <TextView
-            android:id="@+id/mCostOfSubtotalTextView"
+            android:id="@+id/mVehicleOwnerTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp49"
+            android:layout_marginTop="@dimen/base_dp4"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="车主：欧阳先锋"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mVehicleModelTextView" />
+
+        <TextView
+            android:id="@+id/mPhoneTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_dp49"
+            android:layout_marginTop="@dimen/base_dp4"
+            android:paddingEnd="@dimen/base_dp17"
+            android:text="电话：13607726688"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mUserIconImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mVehicleOwnerTextView" />
+
+        <View
+            android:id="@+id/mLineView"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/base_dp15"
+            android:background="#1A000000"
+            app:layout_constraintTop_toBottomOf="@+id/mPhoneTextView" />
+
+        <TextView
+            android:id="@+id/mVehicleBrandTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp20"
+            android:text="车辆品牌：东风柳汽"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/mLineView" />
+
+        <TextView
+            android:id="@+id/mVehicleModelsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/base_dp10"
-            android:paddingStart="@dimen/base_dp15"
-            android:paddingEnd="@dimen/base_dp15"
-            android:text="费用小计：¥1000"
+            android:text="车辆型号: S30"
             android:textColor="#ff9b9b9b"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@+id/mQuantityTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/mVehicleBrandTextView" />
+
+        <TextView
+            android:id="@+id/mEngineNumberTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="发动机编号: WJUU20190513"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/mVehicleModelsTextView" />
+
+        <TextView
+            android:id="@+id/mBuyTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="购买时间: 2019年5月31日"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/mEngineNumberTextView" />
+
+        <TextView
+            android:id="@+id/mVehiclePurchasePriceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp10"
+            android:text="车辆购买价格：¥150,000"
+            android:textColor="#ff9b9b9b"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/mBuyTimeTextView" />
 
         <View
             android:id="@+id/mLineView_1"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/base_dp16"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/base_dp26"
             android:background="#1A000000"
-            app:layout_constraintTop_toBottomOf="@+id/mCostOfSubtotalTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/mVehiclePurchasePriceTextView" />
 
         <TextView
-            android:id="@+id/mCreateTimeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/base_dp10"
-            android:paddingStart="@dimen/base_dp15"
-            android:paddingEnd="@dimen/base_dp15"
-            android:text="创建日期：2022-10-01"
+            android:text="运营情况"
             android:textColor="#ff9b9b9b"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@+id/mCheckRTextView"
-            app:layout_constraintTop_toTopOf="@+id/mCheckRTextView"
-            app:layout_constraintTop_toBottomOf="@+id/mLineView_1" />
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mChooseRTextView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mChooseRTextView"
+            tools:ignore="RtlSymmetry" />
+
 
         <com.ruffian.library.widget.RTextView
-            android:id="@+id/mCheckRTextView"
+            android:id="@+id/mChooseRTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/base_dp15"
@@ -111,7 +203,7 @@
             android:paddingTop="@dimen/base_dp3"
             android:paddingRight="@dimen/base_dp27"
             android:paddingBottom="@dimen/base_dp3"
-            android:text="查看"
+            android:text="选择"
             android:textColor="#ff19cc7e"
             android:textSize="15sp"
             app:background_normal="@color/white"

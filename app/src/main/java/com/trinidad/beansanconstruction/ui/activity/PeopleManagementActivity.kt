@@ -34,6 +34,7 @@ class PeopleManagementActivity : BaseActivity<ActivityPeopleManagementBinding>()
     }
 
     override fun initView() {
+        setHeaderTitle("人员管理")
         mDataBinding.mRecyclerView.apply {
             setPullRefreshAndLoadingMoreEnabled(true, loadingMoreEnabled = true)
             setLayoutManager(LinearLayoutManager(this@PeopleManagementActivity))
@@ -58,7 +59,6 @@ class PeopleManagementActivity : BaseActivity<ActivityPeopleManagementBinding>()
                 dealClickChildItem(view.text.toString(), mPeopleManagementListAdapter.data[position])
             }
         }
-        // 刷新和加载
         // 刷新和加载
         mDataBinding.mRecyclerView.setOnRefreshLoadMoreListener(object : OnRefreshLoadMoreListener {
             override fun onRefresh(refreshLayout: RefreshLayout) {
@@ -89,13 +89,13 @@ class PeopleManagementActivity : BaseActivity<ActivityPeopleManagementBinding>()
     }
 
     private fun dealClickChildItem(text: String, bean: LogonLogSelectDataBean.RecordsBean) {
-        // 审核状态（0/拒绝，1/审核中，2/通过）
-        if (bean.deleted != "1") {
+        // 审核状态（0/审核中，1/拒绝，2/通过）
+        if (bean.deleted != "0") {
             return
         }
         when (text) {
             "拒绝申请" -> {
-                logonLogUpdate(bean, "0")
+                logonLogUpdate(bean, "1")
             }
             "通过审核" -> {
                 logonLogUpdate(bean, "2")

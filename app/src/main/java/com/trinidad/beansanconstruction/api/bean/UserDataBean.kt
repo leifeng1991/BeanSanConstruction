@@ -18,4 +18,7 @@ class UserDataBean {
 
     // 公司
     var cName: String? = null
+    // 用户头像
+    var userImg: String? = null
+    var picUrl: String? = null
 }

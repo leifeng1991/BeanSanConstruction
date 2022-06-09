@@ -22,6 +22,7 @@ class MaintainDesActivity : BaseActivity<ActivityMaintainDesBinding>() {
     }
 
     override fun initView() {
+        setHeaderTitle("维修详情")
     }
 
     override fun initListener() {

@@ -7,6 +7,7 @@ import com.moufans.lib_base.base.fragment.ViewPageFragment
 import com.moufans.lib_base.ext.baseReqExecute
 import com.moufans.lib_base.ext.convertReqExecute
 import com.moufans.lib_base.ext.setOnClickListener2
+import com.moufans.lib_base.utils.ImageLoader
 import com.trinidad.beansanconstruction.R
 import com.trinidad.beansanconstruction.api.bean.UserDataBean
 import com.trinidad.beansanconstruction.constants.AppConstants
@@ -52,7 +53,7 @@ class MineFragment : ViewPageFragment<FragmentMineBinding>() {
             }
             // 编辑资料
             mEditProfileTextView.setOnClickListener2 {
-                startActivity(EditProfileActivity.newIntent(requireContext()))
+                startActivity(EditProfileActivity.newIntent(requireContext(), mUserInfo?.name ?: "", mUserInfo?.picUrl ?: ""))
             }
             // 个人资料
             mUserIconImageView.setOnClickListener2 {
@@ -102,6 +103,7 @@ class MineFragment : ViewPageFragment<FragmentMineBinding>() {
                 mUserInfo = it
                 mFragmentDataBinding.mUserNameTextView.text = it.name ?: "--"
                 mFragmentDataBinding.mUserIdTextView.text = "ID：${it.id}"
+                ImageLoader.setImage(it.picUrl, mFragmentDataBinding.mUserIconImageView, defaultImageResId = R.mipmap.ic_default_icon)
             })
         }
     }

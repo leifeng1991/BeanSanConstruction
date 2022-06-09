@@ -18,11 +18,14 @@
         app:background_normal="@color/white"
         app:corner_radius="@dimen/base_dp4">
 
-        <ImageView
+        <com.ruffian.library.widget.RImageView
             android:id="@+id/mUserIconImageView"
             android:layout_width="@dimen/base_dp58"
             android:layout_height="@dimen/base_dp58"
             android:layout_marginStart="@dimen/base_dp20"
+            app:corner_radius="@dimen/base_dp58"
+            app:border_color="#ff19cc7e"
+            app:border_width="@dimen/base_dp1"
             android:src="@mipmap/ic_default_icon"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -87,7 +90,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/base_dp10"
-            android:paddingStart="@dimen/base_dp20"
             android:paddingEnd="@dimen/base_dp17"
             android:text="申请时间:  5月31日 21:01"
             android:textColor="#ff9b9b9b"
@@ -106,7 +108,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/base_dp15"
-            android:paddingStart="@dimen/base_dp20"
             android:text="详情"
             android:textColor="#ff9b9b9b"
             android:textSize="14sp"

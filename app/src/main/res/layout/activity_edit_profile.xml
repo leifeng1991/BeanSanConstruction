@@ -51,7 +51,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:hint="请输入昵称"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:maxLength="16"
                 android:paddingStart="@dimen/base_dp6"
                 android:textColor="#ff3a3a3a"

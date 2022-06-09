@@ -8,14 +8,13 @@ import androidx.lifecycle.lifecycleScope
 import com.github.gzuliyujiang.wheelpicker.DatePicker
 import com.github.gzuliyujiang.wheelpicker.OptionPicker
 import com.github.gzuliyujiang.wheelpicker.entity.DateEntity
-import com.github.gzuliyujiang.wheelpicker.impl.UnitDateFormatter
 import com.github.gzuliyujiang.wheelpicker.widget.DateWheelLayout
 import com.google.gson.Gson
 import com.moufans.lib_base.base.activity.BaseActivity
 import com.moufans.lib_base.ext.convertReqExecute
 import com.moufans.lib_base.utils.ToastUtil
 import com.trinidad.beansanconstruction.R
-import com.trinidad.beansanconstruction.api.bean.CarInfoSelectDataBean
+import com.trinidad.beansanconstruction.api.bean.RepairSelectDataBean
 import com.trinidad.beansanconstruction.api.param.RepairCostAddRequestParamBean
 import com.trinidad.beansanconstruction.databinding.ActivityMaintainOrderBinding
 import com.trinidad.beansanconstruction.ext.appApi
@@ -36,6 +35,7 @@ class MaintainOrderActivity : BaseActivity<ActivityMaintainOrderBinding>() {
     }
 
     override fun initView() {
+        setHeaderTitle("维修订单申请")
     }
 
     override fun initListener() {
@@ -62,7 +62,7 @@ class MaintainOrderActivity : BaseActivity<ActivityMaintainOrderBinding>() {
                     try {
                         val beanStr = RepairShopActivity.getResult(it.data!!)
                         if (!TextUtils.isEmpty(beanStr)) {
-                            val bean = Gson().fromJson(beanStr, CarInfoSelectDataBean.RecordsBean::class.java)
+                            val bean = Gson().fromJson(beanStr, RepairSelectDataBean.RecordsBean::class.java)
                             mRepairId = bean.id ?: ""
                             mSelectRepairShopRTextView.text = bean.name
                         }

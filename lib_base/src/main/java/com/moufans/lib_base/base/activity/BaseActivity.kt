@@ -54,7 +54,8 @@ abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity(), BaseVie
     }
 
     // 标题栏
-    private var mHeaderBarDataBinding: BaseLayoutHeaderBarBinding? = null
+    var mHeaderBarDataBinding: BaseLayoutHeaderBarBinding? = null
+        private set
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

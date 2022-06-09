@@ -21,6 +21,7 @@ class LogonLogSelectDataBean {
 
         // 角色
         var codename: String? = null
+        var picUrl: String? = null
     }
 
 }

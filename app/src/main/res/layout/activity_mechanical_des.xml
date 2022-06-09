@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.MechanicalDesActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mTopLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mLeftLayout"
+                android:layout_width="@dimen/base_dp100"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingBottom="@dimen/base_dp10">
+
+                <TextView
+                    android:id="@+id/mTitleNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_dp18"
+                    android:text="项目信息"
+                    android:textColor="#ff703c1f"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.ruffian.library.widget.RLinearLayout
+                    android:id="@+id/mSwitchYearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp7"
+                    android:layout_marginTop="@dimen/base_dp12"
+                    android:layout_marginEnd="@dimen/base_dp7"
+                    android:orientation="vertical"
+                    app:border_color_normal="#F7E1C9"
+                    app:border_width_normal="1px"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mTitleNameTextView">
+
+                    <TextView
+                        android:id="@+id/mYearTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_dp19"
+                        android:layout_marginTop="@dimen/base_dp5"
+                        android:layout_marginEnd="@dimen/base_dp19"
+                        android:text="2022"
+                        android:textColor="#ff703c1f"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F7E1C9"
+                        android:gravity="center"
+                        android:text="切换"
+                        android:textColor="#ff703c1f"
+                        android:textSize="13sp" />
+                </com.ruffian.library.widget.RLinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/mLineView"
+                android:layout_width="1px"
+                android:layout_height="0dp"
+                android:background="#1A000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/mLeftLayout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mRightTextView_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp20"
+                android:text="名称：可乐星球"
+                android:textColor="#ff9b9b9b"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/mRightTextView_2"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/mLineView"
+                app:layout_constraintRight_toLeftOf="@+id/mRightTextView_4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/mRightTextView_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp20"
+                android:text="名称：可乐星球"
+                android:textColor="#ff9b9b9b"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/mRightTextView_1"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/mRightTextView_1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mRightTextView_1" />
+
+            <TextView
+                android:id="@+id/mRightTextView_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp20"
+                android:text="地址：运输土方司机"
+                android:textColor="#ff9b9b9b"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/base_dp5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/mRightTextView_3"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/mLineView"
+                app:layout_constraintRight_toLeftOf="@+id/mRightTextView_5"
+                app:layout_constraintTop_toBottomOf="@+id/mRightTextView_1" />
+
+            <TextView
+                android:id="@+id/mRightTextView_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp20"
+                android:text="名称：可乐星球"
+                android:textColor="#ff9b9b9b"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/mRightTextView_2"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/mRightTextView_2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mRightTextView_2" />
+
+            <TextView
+                android:id="@+id/mRightTextView_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_dp20"
+                android:text="地址：运输土方司机"
+                android:textColor="#ff9b9b9b"
+                android:layout_marginTop="@dimen/base_dp5"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/mLineView"
+                app:layout_constraintTop_toBottomOf="@+id/mRightTextView_2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mTopLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mLeftRecyclerView"
+                    android:layout_width="@dimen/base_dp100"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false" />
+
+                <View
+                    android:layout_width="1px"
+                    android:background="#1A000000"
+                    android:layout_height="match_parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -37,6 +37,7 @@ class MaintenanceOrderReviewActivity : BaseActivity<ActivityMaintenanceOrderRevi
     }
 
     override fun initView() {
+        setHeaderTitle("维修订单审核")
         mDataBinding.mRecyclerView.apply {
             setPullRefreshAndLoadingMoreEnabled(true, loadingMoreEnabled = true)
             setLayoutManager(LinearLayoutManager(this@MaintenanceOrderReviewActivity))

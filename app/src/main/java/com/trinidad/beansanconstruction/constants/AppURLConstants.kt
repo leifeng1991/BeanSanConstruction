@@ -29,6 +29,12 @@ interface AppURLConstants {
         // 修改密码
         const val PHONE_USER_UP_PASS = "phone/user/upPass"
 
+        // 修改个人信息
+        const val PHONE_USER_UP_DATE = "phone/user/update"
+
+        // 图片上传
+        const val PHONE_UPLOAD_IMG = "phone/upload/uploadImg"
+
         // 新增修改项目
         const val PHONE_PROJECT_ADD_OR_UPDATE = "phone/project/addOrUpdate"
 
@@ -60,7 +66,7 @@ interface AppURLConstants {
         const val PHONE_OIL_PRICE_UPDATE = "phone/oilPrice/update"
 
         // 扫码查询当前车辆信息
-        const val PHONE_CAR_INFO_SELECT_ONE = "phone/CarInfo/selectOne/{id}"
+        const val PHONE_CAR_INFO_SELECT_ONE = "phone/carInfo/selectOne/{id}"
 
         // 加油
         const val PHONE_OIL_PRICE_LOG_INSERT = "phone/oilPriceLog/insert"
@@ -91,5 +97,50 @@ interface AppURLConstants {
 
         // 人员管理审批
         const val PHONE_LOGON_LOG_UPDATE = "phone/logonLog/update"
+
+        // 车辆列表
+        const val PHONE_CAR_INFO_SELECT = "phone/carInfo/select"
+
+        // 人员列表
+        const val PHONE_USER_SELECT = "phone/user/select"
+
+        // 费用类型列表
+        const val PHONE_COST_TYPE_SELECT = "phone/costType/select"
+
+        // 创建/修改费用类型
+        const val PHONE_COST_TYPE_ADD_OR_UPDATE = "phone/costType/addOrUpdate"
+
+        // 费用类型单条
+        const val PHONE_COST_TYPE_SELECT_ONE = "phone/costType/selectOne/{id}"
+
+        // 创建/修改费用录入
+        const val PHONE_CAR_PROJECT_ADD_OR_UPDATE = "phone/carProject/addOrUpdate"
+
+        // 费用列表
+        const val PHONE_CAR_PROJECT_SELECT = "phone/carProject/select"
+
+        // 项目管理（机械管理下）
+        const val PHONE_DATA_TABLE_SEL_DATA = "phone/dataTable/selData"
+
+        // 费用单条
+        const val PHONE_CAR_PROJECT_SELECT_ONE = "phone/carProject/selectOne/{id}"
+
+        // 项目数据分析
+        const val PHONE_DATA_TABLE_PROJECT_DATA = "phone/dataTable/projectTable"
+
+        // 车辆数据分析
+        const val PHONE_DATA_TABLE_CAR_TABLE = "phone/dataTable/carTable"
+
+        // 项目详情
+        const val PHONE_DATA_TABLE_GET_PROJECT_ONE = "phone/dataTable/getProjectList"
+
+        // 车辆详情
+        const val PHONE_DATA_TABLE_GET_CAR_ONE = "phone/dataTable/getCarList"
+
+        // 查询是否有能使用该模块
+        const val PHONE_MODEL_SELECT_ONE = "phone/model/selectOne/{code}"
+
+        // 版本检查
+        const val PHONE_MODEL_SELECT_ONE_NEW_VERSION = "phone/edition/selectOne/{newversion}"
     }
 }

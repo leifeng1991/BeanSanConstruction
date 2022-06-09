@@ -2,12 +2,16 @@ package com.trinidad.beansanconstruction.ui.activity
 
 import android.content.Context
 import android.content.Intent
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.moufans.lib_base.base.activity.BaseActivity
+import com.moufans.lib_base.ext.convertReqExecute
 import com.trinidad.beansanconstruction.R
 import com.trinidad.beansanconstruction.databinding.ActivityMaintainManagementBinding
+import com.trinidad.beansanconstruction.ext.appApi
 import com.trinidad.beansanconstruction.ui.adapter.HomeFeatureListAdapter
 import com.trinidad.beansanconstruction.ui.bean.FeatureListBean
+import kotlinx.coroutines.launch
 
 class MaintainManagementActivity : BaseActivity<ActivityMaintainManagementBinding>() {
     private val mHomeFeatureListAdapter by lazy {
@@ -33,16 +37,32 @@ class MaintainManagementActivity : BaseActivity<ActivityMaintainManagementBindin
     override fun initListener() {
         mHomeFeatureListAdapter.setOnItemClickListener { _, _, position ->
             val item = mHomeFeatureListAdapter.data[position]
-            when (item.title) {
+            val code = when (item.title) {
                 "维修申请" -> {
-                    startActivity(MaintainOrderActivity.newIntent(this))
+                    "维修申请"
                 }
                 "维修审核" -> {
-                    startActivity(MaintenanceOrderReviewActivity.newIntent(this))
+                    "维修审核"
                 }
-                "其他" -> {
+                else -> {
+                    ""
                 }
             }
+            lifecycleScope.launch {
+                convertReqExecute({ appApi.selectOneCode(code) }, onSuccess = {
+                    when (item.title) {
+                        "维修申请" -> {
+                            startActivity(MaintainOrderActivity.newIntent(this@MaintainManagementActivity))
+                        }
+                        "维修审核" -> {
+                            startActivity(MaintenanceOrderReviewActivity.newIntent(this@MaintainManagementActivity))
+                        }
+                        "其他" -> {
+                        }
+                    }
+                })
+            }
+
 
         }
     }

@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.widget.TextView
 import com.chad.library.adapter.base.viewholder.BaseDataBindingHolder
 import com.moufans.lib_base.base.adapter.BaseAdapter
+import com.moufans.lib_base.utils.ImageLoader
 import com.moufans.lib_base.utils.span.AndroidSpan
 import com.trinidad.beansanconstruction.R
 import com.trinidad.beansanconstruction.api.bean.LogonLogSelectDataBean
@@ -18,16 +19,17 @@ class PeopleManagementListAdapter(layoutResId: Int = R.layout.item_people_manage
             setMyText(mUseRoleTextView, "角色：", item.codename ?: "")
             setMyText(mUseIdTextView, "用户ID：", item.id ?: "")
             setMyText(mApplyTimeTextView, "申请时间：", item.createTime ?: "")
-            // 审核状态（0/拒绝，1/审核中，2/通过）
+            ImageLoader.setImage(item.picUrl, mUserIconImageView, defaultImageResId = R.mipmap.ic_default_icon)
+            // 审核状态（0/审核中，1/拒绝，2/通过）
             val deleted = item.deleted
             mLeftRTextView.apply {
                 isEnabled = deleted != "2"
                 text = when (deleted) {
                     "0" -> {
-                        "已拒绝"
+                        "拒绝申请"
                     }
                     "1" -> {
-                        "拒绝申请"
+                        "已拒绝"
                     }
                     "2" -> {
                         "拒绝申请"
@@ -39,7 +41,7 @@ class PeopleManagementListAdapter(layoutResId: Int = R.layout.item_people_manage
                 }
             }
             mRightRTextView.apply {
-                isEnabled = deleted != "0"
+                isEnabled = deleted != "1"
                 text = when (deleted) {
                     "0" -> {
                         "通过审核"
@@ -59,7 +61,7 @@ class PeopleManagementListAdapter(layoutResId: Int = R.layout.item_people_manage
         }
     }
 
-    fun setMyText(textView: TextView, title: String, content: String) {
+    private fun setMyText(textView: TextView, title: String, content: String) {
         textView.text = AndroidSpan().drawCommonSpan(title).drawForegroundColor(content, Color.parseColor("#ff333333")).spanText
     }
 }

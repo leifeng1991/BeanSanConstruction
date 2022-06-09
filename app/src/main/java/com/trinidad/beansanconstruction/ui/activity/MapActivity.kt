@@ -549,9 +549,11 @@ open class MapActivity : BaseActivity<ActivityMapBinding>(), AMap.OnCameraChange
 
     }
 
+    private var headerIsChecked = false
+
     override fun onPoiSearched(poiResult: PoiResult, p1: Int) {
         hideLoading()
-        for (itm in poiResult.pois){
+        for (itm in poiResult.pois) {
             LogUtil.e("==============onPoiSearched=============${itm.latLonPoint.longitude}==${itm.latLonPoint.latitude}=")
         }
         query = null
@@ -562,9 +564,11 @@ open class MapActivity : BaseActivity<ActivityMapBinding>(), AMap.OnCameraChange
                 findViewById<TextView>(R.id.mAddressNameTextView).text = "当前位置"
                 findViewById<TextView>(R.id.mDistanceTextView).text = "经度：${searchLatlonPoint!!.longitude} | 纬度：${searchLatlonPoint!!.latitude}"
                 if (searchLatlonPoint!!.longitude == mLongitude && searchLatlonPoint!!.latitude == mLatitude) {
+                    headerIsChecked = true
                     findViewById<ImageView>(R.id.mMapCheckedImageView).visibility = View.VISIBLE
                     findViewById<LinearLayout>(R.id.mRootLayout).setBackgroundColor(Color.parseColor("#2619CC7E"))
                 } else {
+                    headerIsChecked = false
                     findViewById<ImageView>(R.id.mMapCheckedImageView).visibility = View.GONE
                     findViewById<LinearLayout>(R.id.mRootLayout).setBackgroundColor(Color.parseColor("#FFFFFFFF"))
                 }
@@ -577,6 +581,16 @@ open class MapActivity : BaseActivity<ActivityMapBinding>(), AMap.OnCameraChange
             })
         }
         LogUtil.e("===================onPoiSearched===================${poiResult.pois.toArray().contentToString()}===")
+        if (!headerIsChecked) {
+            val list = if (mDataBinding.mAddressRecyclerView.currentPage == 1) mutableListOf<PoiItem>() else mLocationAdapter.data
+            list.addAll(poiResult.pois ?: mutableListOf<PoiItem>())
+            for (item in list) {
+                if (item.latLonPoint.longitude == mLongitude && item.latLonPoint.latitude == mLatitude) {
+                    mLocationAdapter.checkedIndex = list.indexOf(item)
+                    break
+                }
+            }
+        }
         mDataBinding.mAddressRecyclerView.handlerSuccess(mLocationAdapter, poiResult.pois ?: mutableListOf())
 //        mDataBinding.mContentTextView.text = poiResult.pois.toArray().contentToString()
     }

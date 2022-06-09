@@ -212,7 +212,7 @@
             android:textColor="#ff9b9b9b"
             android:textSize="15sp" />
 
-        <EditText
+        <com.ruffian.library.widget.REditText
             android:id="@+id/mContentTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -221,10 +221,13 @@
             android:layout_marginEnd="@dimen/base_dp27"
             android:gravity="left|top"
             android:hint="请输入维修描述"
-            android:minHeight="@dimen/base_dp80"
+            android:minHeight="@dimen/base_dp100"
             android:padding="@dimen/base_dp10"
             android:textColor="#d9000000"
-            android:textSize="15sp" />
+            android:textColorHint="#ff9b9b9b"
+            android:textSize="15sp"
+            app:background_normal="#F4F4F4"
+            app:corner_radius="@dimen/base_dp6" />
 
         <Space
             android:layout_width="match_parent"

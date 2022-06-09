@@ -35,6 +35,21 @@
         <com.moufans.lib_base.base.recyclerview.MyRecyclerView
             android:id="@+id/mRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/mNewFeeTypeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#19CC7E"
+            android:gravity="center"
+            android:paddingTop="@dimen/base_dp15"
+            android:paddingBottom="@dimen/base_dp15"
+            android:text="新增费用类型"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
     </LinearLayout>
 </layout>

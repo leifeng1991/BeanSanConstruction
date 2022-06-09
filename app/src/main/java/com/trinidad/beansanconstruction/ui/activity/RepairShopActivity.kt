@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.moufans.lib_base.base.activity.BaseActivity
 import com.moufans.lib_base.ext.convertReqExecute
-import com.ruffian.library.widget.RTextView
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
 import com.trinidad.beansanconstruction.R
@@ -26,6 +25,7 @@ class RepairShopActivity : BaseActivity<ActivityRepairShopBinding>() {
     }
 
     override fun initView() {
+        setHeaderTitle("维修店")
         mDataBinding.mRecyclerView.apply {
             setPullRefreshAndLoadingMoreEnabled(true, loadingMoreEnabled = true)
             setLayoutManager(LinearLayoutManager(this@RepairShopActivity))
@@ -67,7 +67,7 @@ class RepairShopActivity : BaseActivity<ActivityRepairShopBinding>() {
     private fun carInfoSelect() {
         val keyWord = mDataBinding.mSearchEditText.text.toString().trim()
         lifecycleScope.launch {
-            convertReqExecute({ appApi.carInfoSelect(keyWord, "${mDataBinding.mRecyclerView.currentPage}") }, onSuccess = {
+            convertReqExecute({ appApi.repairSelect(keyWord, "${mDataBinding.mRecyclerView.currentPage}") }, onSuccess = {
                 mRepairShopListAdapter.setList(it.records)
             }, baseView = this@RepairShopActivity)
         }

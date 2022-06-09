@@ -33,4 +33,21 @@ class RequestParamJsonBean {
     var number: String? = null
     var carId: String? = null
 
+
+    var pattern: String? = null
+    var type: String? = null
+
+
+    var pid: String? = null
+    var period: String? = null
+    var clas: String? = null
+    var costTypeId: String? = null
+    var unitPrice: String? = null
+    var sumPrice: String? = null
+    var aid: String? = null
+    var aname: String? = null
+    var content: String? = null
+
+    var picUrl: String? = null
+
 }

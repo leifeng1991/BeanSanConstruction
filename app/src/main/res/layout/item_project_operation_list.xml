@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
     </data>
 
-    <LinearLayout
+    <com.ruffian.library.widget.RLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/base_dp15"
         android:layout_marginEnd="@dimen/base_dp15"
         android:layout_marginBottom="@dimen/base_dp15"
+        app:corner_radius_bottom_left="@dimen/base_dp7"
+        app:corner_radius_bottom_right="@dimen/base_dp7"
         android:orientation="vertical">
 
+        <Space
+            android:id="@+id/mTopSpace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_dp15"/>
+
         <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/mDesLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -37,19 +46,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <TextView
-                android:id="@+id/mReplaceTheProjectTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="更换项目"
-                android:textColor="#ff703c1f"
-                android:textSize="14sp" />
-
             <ImageView
                 android:id="@+id/mReplaceTheProjectImageView"
                 android:layout_width="@dimen/base_sp20"
                 android:layout_height="@dimen/base_sp20"
-                android:src="@mipmap/ic_two_line" />
+                android:src="@mipmap/ic_mm_right_arrow" />
         </com.ruffian.library.widget.RLinearLayout>
 
         <LinearLayout
@@ -67,14 +68,31 @@
                 android:textColor="#80000000"
                 android:textSize="14sp" />
 
-            <TextView
+            <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/mOutputTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="¥180,000"
                 android:textColor="#d9000000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:text="¥180,000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="#80000000"
+                android:textSize="12sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
             <ImageView
                 android:layout_width="@dimen/base_dp20"
@@ -97,14 +115,31 @@
                 android:textColor="#80000000"
                 android:textSize="14sp" />
 
-            <TextView
+            <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/mPaymentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="¥180,000"
                 android:textColor="#d9000000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:text="¥180,000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="#80000000"
+                android:textSize="12sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
             <ImageView
                 android:layout_width="@dimen/base_dp20"
@@ -127,19 +162,75 @@
                 android:textColor="#80000000"
                 android:textSize="14sp" />
 
-            <TextView
+            <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/mProfitTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="¥180,000"
                 android:textColor="#d9000000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:text="¥180,000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="#80000000"
+                android:textSize="12sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
             <ImageView
                 android:layout_width="@dimen/base_dp20"
                 android:layout_height="@dimen/base_dp20"
                 android:src="@mipmap/ic_mm_right_arrow" />
         </LinearLayout>
-    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#1A000000" />
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:background_normal="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:corner_radius_bottom_left="@dimen/base_dp7"
+            app:corner_radius_bottom_right="@dimen/base_dp7"
+            android:padding="@dimen/base_dp15">
+
+            <TextView
+                android:id="@+id/mBottomTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#80000000"
+                android:textSize="14sp"
+                tools:text="利润        " />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/mSwitchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="切换车辆"
+                android:textColor="#80000000"
+                android:textSize="15sp" />
+
+        </com.ruffian.library.widget.RLinearLayout>
+    </com.ruffian.library.widget.RLinearLayout>
 </layout>

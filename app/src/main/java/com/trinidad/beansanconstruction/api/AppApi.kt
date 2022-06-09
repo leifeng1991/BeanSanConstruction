@@ -1,9 +1,12 @@
 package com.trinidad.beansanconstruction.api
 
 import com.moufans.lib_base.request.BaseResp
+import com.moufans.update.VersionDataBean
 import com.trinidad.beansanconstruction.api.bean.*
 import com.trinidad.beansanconstruction.constants.AppURLConstants
 import com.trinidad.beansanconstruction.constants.RequestParamConstants
+import io.reactivex.rxjava3.core.Observable
+import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.http.*
 
@@ -45,6 +48,18 @@ interface AppApi {
      */
     @POST(AppURLConstants.PHONE_USER_UP_PASS)
     suspend fun upPass(@Body requestBody: RequestBody): BaseResp<Unit>
+
+    /**
+     * 修改个人信息
+     */
+    @POST(AppURLConstants.PHONE_USER_UP_DATE)
+    suspend fun update(@Body requestBody: RequestBody): BaseResp<Boolean>
+
+    /**
+     * 图片上传
+     */
+    @POST(AppURLConstants.PHONE_UPLOAD_IMG)
+    suspend fun uploadImg(@Body multipartBody: MultipartBody): BaseResp<String>
 
     /**
      * 退出登录
@@ -147,7 +162,7 @@ interface AppApi {
      * 维修店列表
      */
     @GET(AppURLConstants.PHONE_REPAIR_SELECT)
-    suspend fun carInfoSelect(@Query(RequestParamConstants.KEYWORD) keyword: String, @Query(RequestParamConstants.PAGE_NUM) pageNum: String, @Query(RequestParamConstants.PAGE_SIZE) pageSize: String = "10"): BaseResp<CarInfoSelectDataBean>
+    suspend fun repairSelect(@Query(RequestParamConstants.KEYWORD) keyword: String, @Query(RequestParamConstants.PAGE_NUM) pageNum: String, @Query(RequestParamConstants.PAGE_SIZE) pageSize: String = "10"): BaseResp<RepairSelectDataBean>
 
     /**
      * 车辆下拉数据
@@ -191,5 +206,97 @@ interface AppApi {
      */
     @POST(AppURLConstants.PHONE_LOGON_LOG_UPDATE)
     suspend fun logonLogUpdate(@Body requestBody: RequestBody): BaseResp<Boolean>
+
+    /**
+     * 车辆列表
+     */
+    @GET(AppURLConstants.PHONE_CAR_INFO_SELECT)
+    suspend fun carInfoSelect(@Query(RequestParamConstants.KEYWORD) keyword: String, @Query(RequestParamConstants.PAGE_NUM) pageNum: String, @Query(RequestParamConstants.PAGE_SIZE) pageSize: String = "10"): BaseResp<CarInfoSelectDataBean>
+
+    /**
+     * 人员列表
+     */
+    @GET(AppURLConstants.PHONE_USER_SELECT)
+    suspend fun userSelect(@Query(RequestParamConstants.KEYWORD) keyword: String, @Query(RequestParamConstants.PAGE_NUM) pageNum: String, @Query(RequestParamConstants.PAGE_SIZE) pageSize: String = "10"): BaseResp<UserSelectDataBean>
+
+    /**
+     * 费用类型列表
+     */
+    @GET(AppURLConstants.PHONE_COST_TYPE_SELECT)
+    suspend fun costTypeSelect(@Query(RequestParamConstants.KEYWORD) keyword: String, @Query(RequestParamConstants.PAGE_NUM) pageNum: String, @Query(RequestParamConstants.PAGE_SIZE) pageSize: String = "10"): BaseResp<CostTypeSelectDataBean>
+
+    /**
+     * 费用列表
+     */
+    @GET(AppURLConstants.PHONE_CAR_PROJECT_SELECT)
+    suspend fun carProjectSelect(@Query(RequestParamConstants.KEYWORD) keyword: String, @Query(RequestParamConstants.PAGE_NUM) pageNum: String, @Query(RequestParamConstants.PAGE_SIZE) pageSize: String = "10"): BaseResp<CarProjectSelectDataBean>
+
+    /**
+     * 创建/修改费用类型
+     */
+    @POST(AppURLConstants.PHONE_COST_TYPE_ADD_OR_UPDATE)
+    suspend fun costTypeAddOrUpdate(@Body requestBody: RequestBody): BaseResp<Boolean>
+
+    /**
+     * 项目管理（机械管理下）
+     * @param pid   项目id（为空时，默认第一条数据）
+     * @param carId 车辆id（为空时，默认第一条数据）
+     */
+    @GET(AppURLConstants.PHONE_DATA_TABLE_SEL_DATA)
+    suspend fun dataTableSelData(@Query(RequestParamConstants.PID) pid: String, @Query(RequestParamConstants.CAR_ID) carId: String): BaseResp<DataTableSelDataBean>
+
+
+    /**
+     * 创建/修改费用录入
+     */
+    @POST(AppURLConstants.PHONE_CAR_PROJECT_ADD_OR_UPDATE)
+    suspend fun carProjectAddOrUpdate(@Body requestBody: RequestBody): BaseResp<Boolean>
+
+    /**
+     * 费用单条
+     */
+    @GET(AppURLConstants.PHONE_CAR_PROJECT_SELECT_ONE)
+    suspend fun carProjectSelectOne(@Path("id") id: String): BaseResp<CarProjectSelectOneDataBean>
+
+    /**
+     * 项目数据分析
+     * @param yearMonth 年月（YYYY-MM）
+     */
+    @GET(AppURLConstants.PHONE_DATA_TABLE_PROJECT_DATA)
+    suspend fun projectTable(@Query(RequestParamConstants.YEAR_MONTH) yearMonth: String, @Query(RequestParamConstants.PAGE_NUM) pageNum: String, @Query(RequestParamConstants.PAGE_SIZE) pageSize: String = "10"): BaseResp<ProjectVehicleDataBean>
+
+    /**
+     * 车辆数据分析
+     * @param yearMonth 年月（YYYY-MM）
+     */
+    @GET(AppURLConstants.PHONE_DATA_TABLE_CAR_TABLE)
+    suspend fun carTable(@Query(RequestParamConstants.YEAR_MONTH) yearMonth: String, @Query(RequestParamConstants.PAGE_NUM) pageNum: String, @Query(RequestParamConstants.PAGE_SIZE) pageSize: String = "10"): BaseResp<ProjectVehicleDataBean>
+
+    /**
+     * 项目详情
+     * @param id 项目id
+     * @param year 年（YYYY）
+     */
+    @GET(AppURLConstants.PHONE_DATA_TABLE_GET_PROJECT_ONE)
+    suspend fun getProjectOne(@Query(RequestParamConstants.ID) id: String, @Query(RequestParamConstants.YEAR) year: String): BaseResp<ProjectVehicleDataTableDataBean>
+
+    /**
+     * 车辆详情
+     * @param id 年月（YYYY-MM）
+     */
+    @GET(AppURLConstants.PHONE_DATA_TABLE_GET_CAR_ONE)
+    suspend fun getCarOne(@Query(RequestParamConstants.ID) id: String, @Query(RequestParamConstants.YEAR) year: String): BaseResp<ProjectVehicleDataTableDataBean>
+
+    /**
+     * 查询是否有能使用该模块
+     */
+    @GET(AppURLConstants.PHONE_MODEL_SELECT_ONE)
+    suspend fun selectOneCode(@Path("code") code: String): BaseResp<Boolean>
+
+    /**
+     * 检查版本
+     */
+    @GET(AppURLConstants.PHONE_MODEL_SELECT_ONE_NEW_VERSION)
+     fun checkVersion(@Path("newversion") newversion: String): Observable<BaseResp<List<VersionDataBean>>>
 }
 

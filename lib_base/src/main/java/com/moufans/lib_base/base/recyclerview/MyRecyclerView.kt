@@ -32,7 +32,7 @@ class MyRecyclerView @JvmOverloads constructor(context: Context, attrs: Attribut
     /**
      * 设置每次加载的数量
      */
-    var loadSize = 20
+    var loadSize = 10
     
     /**
      * 获取RecyclerView

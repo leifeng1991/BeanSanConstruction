@@ -89,25 +89,28 @@
                     android:layout_marginTop="@dimen/base_dp15"
                     android:orientation="horizontal">
 
-                    <com.ruffian.library.widget.RRadioButton
+                    <com.ruffian.library.widget.RTextView
                         android:id="@+id/mRRadioButton_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/base_dp35"
                         android:layout_weight="1"
                         android:button="@null"
+                        android:checked="true"
                         android:gravity="center"
+                        android:paddingTop="@dimen/base_dp3"
+                        android:paddingBottom="@dimen/base_dp3"
                         android:text="每车"
                         android:textSize="@dimen/base_sp15"
-                        app:background_checked="#19CC7E"
                         app:background_normal="#fff"
+                        app:background_selected="#19CC7E"
                         app:border_color_normal="#19CC7E"
                         app:border_width_normal="1dp"
                         app:corner_radius="3dp"
-                        app:text_color_checked="@color/white"
-                        app:text_color_normal="#19CC7E" />
+                        app:text_color_normal="#19CC7E"
+                        app:text_color_selected="@color/white" />
 
-                    <com.ruffian.library.widget.RRadioButton
+                    <com.ruffian.library.widget.RTextView
                         android:id="@+id/mRRadioButton_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -115,32 +118,36 @@
                         android:layout_weight="1"
                         android:button="@null"
                         android:gravity="center"
+                        android:paddingTop="@dimen/base_dp3"
+                        android:paddingBottom="@dimen/base_dp3"
                         android:text="每次"
                         android:textSize="@dimen/base_sp15"
-                        app:background_checked="#19CC7E"
                         app:background_normal="#fff"
+                        app:background_selected="#19CC7E"
                         app:border_color_normal="#19CC7E"
                         app:border_width_normal="1dp"
                         app:corner_radius="3dp"
-                        app:text_color_checked="@color/white"
-                        app:text_color_normal="#19CC7E" />
+                        app:text_color_normal="#19CC7E"
+                        app:text_color_selected="@color/white" />
 
-                    <com.ruffian.library.widget.RRadioButton
+                    <com.ruffian.library.widget.RTextView
                         android:id="@+id/mRRadioButton_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:button="@null"
                         android:gravity="center"
+                        android:paddingTop="@dimen/base_dp3"
+                        android:paddingBottom="@dimen/base_dp3"
                         android:text="每小时"
                         android:textSize="@dimen/base_sp15"
-                        app:background_checked="#19CC7E"
                         app:background_normal="#fff"
+                        app:background_selected="#19CC7E"
                         app:border_color_normal="#19CC7E"
                         app:border_width_normal="1dp"
                         app:corner_radius="3dp"
-                        app:text_color_checked="@color/white"
-                        app:text_color_normal="#19CC7E" />
+                        app:text_color_normal="#19CC7E"
+                        app:text_color_selected="@color/white" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -149,7 +156,7 @@
                     android:layout_marginTop="@dimen/base_dp15"
                     android:orientation="horizontal">
 
-                    <com.ruffian.library.widget.RRadioButton
+                    <com.ruffian.library.widget.RTextView
                         android:id="@+id/mRRadioButton_4"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -157,17 +164,19 @@
                         android:layout_weight="1"
                         android:button="@null"
                         android:gravity="center"
+                        android:paddingTop="@dimen/base_dp3"
+                        android:paddingBottom="@dimen/base_dp3"
                         android:text="每平方"
                         android:textSize="@dimen/base_sp15"
-                        app:background_checked="#19CC7E"
                         app:background_normal="#fff"
+                        app:background_selected="#19CC7E"
                         app:border_color_normal="#19CC7E"
                         app:border_width_normal="1dp"
                         app:corner_radius="3dp"
-                        app:text_color_checked="@color/white"
-                        app:text_color_normal="#19CC7E" />
+                        app:text_color_normal="#19CC7E"
+                        app:text_color_selected="@color/white" />
 
-                    <com.ruffian.library.widget.RRadioButton
+                    <com.ruffian.library.widget.RTextView
                         android:id="@+id/mRRadioButton_5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -175,32 +184,36 @@
                         android:layout_weight="1"
                         android:button="@null"
                         android:gravity="center"
+                        android:paddingTop="@dimen/base_dp3"
+                        android:paddingBottom="@dimen/base_dp3"
                         android:text="每立方"
                         android:textSize="@dimen/base_sp15"
-                        app:background_checked="#19CC7E"
                         app:background_normal="#fff"
+                        app:background_selected="#19CC7E"
                         app:border_color_normal="#19CC7E"
                         app:border_width_normal="1dp"
                         app:corner_radius="3dp"
-                        app:text_color_checked="@color/white"
-                        app:text_color_normal="#19CC7E" />
+                        app:text_color_normal="#19CC7E"
+                        app:text_color_selected="@color/white" />
 
-                    <com.ruffian.library.widget.RRadioButton
+                    <com.ruffian.library.widget.RTextView
                         android:id="@+id/mRRadioButton_6"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:button="@null"
                         android:gravity="center"
+                        android:paddingTop="@dimen/base_dp3"
+                        android:paddingBottom="@dimen/base_dp3"
                         android:text="每分钟"
                         android:textSize="@dimen/base_sp15"
-                        app:background_checked="#19CC7E"
                         app:background_normal="#fff"
+                        app:background_selected="#19CC7E"
                         app:border_color_normal="#19CC7E"
                         app:border_width_normal="1dp"
                         app:corner_radius="3dp"
-                        app:text_color_checked="@color/white"
-                        app:text_color_normal="#19CC7E" />
+                        app:text_color_normal="#19CC7E"
+                        app:text_color_selected="@color/white" />
                 </LinearLayout>
 
                 <FrameLayout
@@ -209,7 +222,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/base_dp15">
 
-                    <com.ruffian.library.widget.RRadioButton
+                    <com.ruffian.library.widget.RTextView
                         android:id="@+id/mRRadioButton_0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -218,24 +231,27 @@
                         android:padding="@dimen/base_dp10"
                         android:text="其它："
                         android:textSize="@dimen/base_sp15"
-                        app:background_checked="#19CC7E"
                         app:background_normal="#fff"
+                        app:background_selected="#19CC7E"
                         app:border_color_normal="#19CC7E"
                         app:border_width_normal="1dp"
                         app:corner_radius="3dp"
-                        app:text_color_checked="@color/white"
-                        app:text_color_normal="#19CC7E" />
+                        app:text_color_normal="#19CC7E"
+                        app:text_color_selected="@color/white" />
 
-                    <com.ruffian.library.widget.REditText
+                    <EditText
                         android:id="@+id/mInputUnitEditText"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginStart="@dimen/base_dp50"
-                        android:layout_weight="1"
                         android:inputType="text"
-                        android:textSize="@dimen/base_sp15"
-                        app:corner_radius="6dp"
-                        app:text_color_normal="#333333" />
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@mipmap/base_bg_transparent"
+                        android:textColor="#19CC7E"
+                        android:textSize="@dimen/base_sp15" />
                 </FrameLayout>
             </RadioGroup>
 
@@ -278,15 +294,21 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="#fffa6400"
+                    android:textSize="15sp" />
+
                 <EditText
                     android:id="@+id/mPriceTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:layout_marginEnd="@dimen/base_dp20"
                     android:gravity="center"
                     android:inputType="numberDecimal"
-                    android:minWidth="@dimen/base_dp40"
+                    android:minWidth="@dimen/base_dp20"
                     android:text="0"
                     android:textColor="#fffa6400"
                     android:textSize="25sp" />
@@ -317,6 +339,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/base_dp27"
+                android:layout_marginTop="@dimen/base_dp15"
                 android:layout_marginEnd="@dimen/base_dp27"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/mCutWayTextView">
@@ -355,7 +378,7 @@
                     android:paddingTop="@dimen/base_dp3"
                     android:paddingEnd="@dimen/base_dp19"
                     android:paddingBottom="@dimen/base_dp3"
-                    android:text="每次"
+                    android:text="无提成"
                     android:textSize="@dimen/base_sp15"
                     app:background_checked="#19CC7E"
                     app:background_normal="#fff"
@@ -393,28 +416,54 @@
                         android:textColor="#ff9b9b9b"
                         android:textSize="15sp" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="¥ 200"
-                        android:textColor="#fffa6400"
-                        android:textSize="15sp" />
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥ "
+                            android:textColor="#fffa6400"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/mUnitPriceTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#fffa6400"
+                            android:textSize="15sp" />
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="提成金额"
+                        android:text="提成金额："
                         android:textColor="#ff9b9b9b"
                         android:textSize="15sp" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="¥ 20"
-                        android:textColor="#fffa6400"
-                        android:textSize="15sp" />
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥ "
+                            android:textColor="#fffa6400"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/mCommissionAmountTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#fffa6400"
+                            android:textSize="15sp" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -437,6 +486,7 @@
                         android:layout_weight="1" />
 
                     <com.ruffian.library.widget.RTextView
+                        android:id="@+id/mSubTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -450,16 +500,33 @@
                         app:corner_radius="3dp"
                         app:text_color_normal="#19CC7E" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="@dimen/base_dp15"
-                        android:paddingRight="@dimen/base_dp15"
-                        android:text="10%"
-                        android:textColor="#fffa6400"
-                        android:textSize="25sp" />
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/base_dp15"
+                        android:paddingEnd="@dimen/base_dp15">
+
+                        <TextView
+                            android:id="@+id/mRatioTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="@dimen/base_dp30"
+                            android:gravity="right"
+                            android:text="0"
+                            android:textColor="#fffa6400"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/mRatioUnitTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="#fffa6400"
+                            android:textSize="25sp" />
+                    </LinearLayout>
 
                     <com.ruffian.library.widget.RTextView
+                        android:id="@+id/mAddTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -486,7 +553,8 @@
                 android:text="保存"
                 android:textColor="#ffffffff"
                 android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

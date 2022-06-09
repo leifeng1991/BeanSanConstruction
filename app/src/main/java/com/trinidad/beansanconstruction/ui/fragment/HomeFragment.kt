@@ -1,19 +1,23 @@
 package com.trinidad.beansanconstruction.ui.fragment
 
 import android.os.Bundle
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.moufans.lib_base.base.fragment.ViewPageFragment
+import com.moufans.lib_base.ext.convertReqExecute
 import com.moufans.lib_base.utils.StatusBarUtil
 import com.moufans.lib_base.utils.ToastUtil
 import com.trinidad.beansanconstruction.R
 import com.trinidad.beansanconstruction.constants.AppConstants
 import com.trinidad.beansanconstruction.databinding.FragmentNewHomeBinding
+import com.trinidad.beansanconstruction.ext.appApi
 import com.trinidad.beansanconstruction.ui.activity.*
 import com.trinidad.beansanconstruction.ui.adapter.HomeBannerAdapter
 import com.trinidad.beansanconstruction.ui.adapter.HomeFeatureListAdapter
 import com.trinidad.beansanconstruction.ui.bean.FeatureListBean
 import com.trinidad.beansanconstruction.utils.SharedPrefUtil
 import com.youth.banner.indicator.RectangleIndicator
+import kotlinx.coroutines.launch
 
 
 /**
@@ -54,35 +58,64 @@ class HomeFragment : ViewPageFragment<FragmentNewHomeBinding>() {
         // 功能列表点击事件
         mHomeFeatureListAdapter.setOnItemClickListener { _, _, position ->
             val title = mHomeFeatureListAdapter.data[position].title
-//            if (SharedPrefUtil.get(AppConstants.USER_CODE, "") == "YSSJ" && title != "车辆维修") {
-//                ToastUtil.showShort("请向管理员开通权限")
-//                return@setOnItemClickListener
-//            }
-            when (title) {
+            val code = when (title) {
                 // 加油
                 "加油" -> {
-                    startActivity(RefuelManagementActivity.newIntent(requireContext()))
+                    "JY"
                 }
                 // 机械管理
                 "机械管理" -> {
-                    startActivity(MechanicalManagementActivity.newIntent(requireContext()))
+                    "JX"
                 }
                 "车辆维修" -> {
-                    startActivity(MaintainManagementActivity.newIntent(requireContext()))
+                    "WX"
                 }
                 // 项目管理
                 "项目管理" -> {
-                    startActivity(ProjectManagementActivity.newIntent(requireContext()))
+                    "XM"
                 }
                 // 人员管理
                 "人员管理" -> {
-                    startActivity(PeopleManagementActivity.newIntent(requireContext()))
+                    "RY"
                 }
                 // 其他
                 "其他" -> {
-
+                    ""
+                }
+                else -> {
+                    ""
                 }
             }
+            lifecycleScope.launch {
+                convertReqExecute({ appApi.selectOneCode(code) }, onSuccess = {
+                    when (title) {
+                        // 加油
+                        "加油" -> {
+                            startActivity(RefuelManagementActivity.newIntent(requireContext()))
+                        }
+                        // 机械管理
+                        "机械管理" -> {
+                            startActivity(MechanicalManagementActivity.newIntent(requireContext()))
+                        }
+                        "车辆维修" -> {
+                            startActivity(MaintainManagementActivity.newIntent(requireContext()))
+                        }
+                        // 项目管理
+                        "项目管理" -> {
+                            startActivity(ProjectManagementActivity.newIntent(requireContext()))
+                        }
+                        // 人员管理
+                        "人员管理" -> {
+                            startActivity(PeopleManagementActivity.newIntent(requireContext()))
+                        }
+                        // 其他
+                        "其他" -> {
+
+                        }
+                    }
+                })
+            }
+
         }
     }
 

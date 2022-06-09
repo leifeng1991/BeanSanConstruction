@@ -14,7 +14,6 @@ import com.king.zxing.analyze.MultiFormatAnalyzer
 import com.moufans.lib_base.base.activity.BaseActivity
 import com.moufans.lib_base.utils.LogUtil
 import com.moufans.lib_base.utils.PermissionHelper
-import com.moufans.lib_base.utils.ToastUtil
 import com.trinidad.beansanconstruction.R
 import com.trinidad.beansanconstruction.api.bean.ScanBean
 import com.trinidad.beansanconstruction.databinding.ActivityRichScanBinding
@@ -29,6 +28,7 @@ class RichScanActivity : BaseActivity<ActivityRichScanBinding>(), CameraScan.OnS
     private var mCameraScan: CameraScan? = null
 
     override fun getDataBindingLayoutResId(): Int {
+        overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom)
         return R.layout.activity_rich_scan
     }
 

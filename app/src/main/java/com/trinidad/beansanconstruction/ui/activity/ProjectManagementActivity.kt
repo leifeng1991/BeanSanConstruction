@@ -2,12 +2,16 @@ package com.trinidad.beansanconstruction.ui.activity
 
 import android.content.Context
 import android.content.Intent
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.moufans.lib_base.base.activity.BaseActivity
+import com.moufans.lib_base.ext.convertReqExecute
 import com.trinidad.beansanconstruction.R
 import com.trinidad.beansanconstruction.databinding.ActivityProjectManagementBinding
+import com.trinidad.beansanconstruction.ext.appApi
 import com.trinidad.beansanconstruction.ui.adapter.HomeFeatureListAdapter
 import com.trinidad.beansanconstruction.ui.bean.FeatureListBean
+import kotlinx.coroutines.launch
 
 /**
  * 项目管理
@@ -36,17 +40,36 @@ class ProjectManagementActivity : BaseActivity<ActivityProjectManagementBinding>
     override fun initListener() {
         mHomeFeatureListAdapter.setOnItemClickListener { _, _, position ->
             val item = mHomeFeatureListAdapter.data[position]
-            when (item.title) {
+            val code = when (item.title) {
                 "项目设置" -> {
-                    startActivity(ProjectListActivity.newIntent(this, 0))
+                    "XM_Start"
                 }
                 "倒土场设置" -> {
-                    startActivity(ProjectListActivity.newIntent(this, 1))
+                    "XM_End"
                 }
                 "路线管理" -> {
-                    startActivity(RouteSettingsListActivity.newIntent(this))
+                    "XM_Route"
+                }
+                else -> {
+                    ""
                 }
             }
+            lifecycleScope.launch {
+                convertReqExecute({ appApi.selectOneCode(code) }, onSuccess = {
+                    when (item.title) {
+                        "项目设置" -> {
+                            startActivity(ProjectListActivity.newIntent(this@ProjectManagementActivity, 0))
+                        }
+                        "倒土场设置" -> {
+                            startActivity(ProjectListActivity.newIntent(this@ProjectManagementActivity, 1))
+                        }
+                        "路线管理" -> {
+                            startActivity(RouteSettingsListActivity.newIntent(this@ProjectManagementActivity))
+                        }
+                    }
+                })
+            }
+
 
         }
     }

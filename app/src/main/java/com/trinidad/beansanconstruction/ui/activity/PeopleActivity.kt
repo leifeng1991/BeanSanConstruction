@@ -1,5 +1,6 @@
 package com.trinidad.beansanconstruction.ui.activity
 
+import android.content.Context
 import android.content.Intent
 import android.view.inputmethod.EditorInfo
 import androidx.lifecycle.lifecycleScope
@@ -25,6 +26,7 @@ class PeopleActivity : BaseActivity<ActivityPeopleBinding>() {
     }
 
     override fun initView() {
+        setHeaderTitle("人员")
         mDataBinding.mRecyclerView.apply {
             setPullRefreshAndLoadingMoreEnabled(true, loadingMoreEnabled = true)
             setLayoutManager(LinearLayoutManager(this@PeopleActivity))
@@ -44,7 +46,8 @@ class PeopleActivity : BaseActivity<ActivityPeopleBinding>() {
         }
         mPeopleListAdapter.addChildClickViewIds(R.id.mChooseRTextView)
         mPeopleListAdapter.setOnItemChildClickListener { _, _, position ->
-
+            setResult(RESULT_OK, Intent().apply { putExtra(INTENT_DATA, Gson().toJson(mPeopleListAdapter.data[position])) })
+            finish()
         }
         mDataBinding.mRecyclerView.setOnRefreshLoadMoreListener(object : OnRefreshLoadMoreListener {
             override fun onRefresh(refreshLayout: RefreshLayout) {
@@ -64,6 +67,24 @@ class PeopleActivity : BaseActivity<ActivityPeopleBinding>() {
 
     private fun getList() {
         val keyWord = mDataBinding.mSearchEditText.text.toString().trim()
+        lifecycleScope.launch {
+            convertReqExecute({ appApi.userSelect(keyWord, "${mDataBinding.mRecyclerView.currentPage}") }, onSuccess = {
+                mDataBinding.mRecyclerView.handlerSuccess(mPeopleListAdapter, it.records)
+            }, onFailure = { _, status, _ ->
+                mDataBinding.mRecyclerView.handlerError(mPeopleListAdapter, status)
+            }, baseView = this@PeopleActivity)
+        }
+    }
 
+    companion object {
+        private const val INTENT_DATA = "data"
+
+        fun newIntent(context: Context): Intent {
+            return Intent(context, PeopleActivity::class.java)
+        }
+
+        fun getResult(data: Intent): String {
+            return data.getStringExtra(INTENT_DATA) ?: ""
+        }
     }
 }

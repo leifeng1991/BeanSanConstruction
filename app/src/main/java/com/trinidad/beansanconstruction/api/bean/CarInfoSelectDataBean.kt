@@ -11,16 +11,37 @@ class CarInfoSelectDataBean {
         // 主键id
         var id: String? = null
 
-        // 维修店名
-        var name: String? = null
+        // 车牌
+        var carPlate: String? = null
 
-        // 联系人
+        // 编号
+        var number: String? = null
+
+        // 车型
+        var ctName: String? = null
+
+        // 车主
         var person: String? = null
 
-        // 项目打卡范围
+        // 电话
         var phone: String? = null
 
-        // 地址
-        var address: String? = null
+        // 车辆品牌
+        var brand: String? = null
+
+        // 车辆型号
+        var carType: String? = null
+
+        // 发动机编号
+        var motor: String? = null
+
+        // 购买时间
+        var gmTime: String? = null
+
+        // 车辆价格
+        var price: String? = null
+
+        // 1自有/2加盟
+        var type: String? = null
     }
 }

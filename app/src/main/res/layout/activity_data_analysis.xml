@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.activity.RefuelRecordActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/mCommonTabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/base_dp25"
+                android:layout_centerInParent="true"
+                android:background="#ffffff"
+                tl:tl_indicator_color="#19CC7E"
+                tl:tl_indicator_margin_left="@dimen/base_dp20"
+                tl:tl_indicator_margin_right="@dimen/base_dp20"
+                tl:tl_textSelectColor="#19CC7E"
+                tl:tl_textUnselectColor="#80000000"
+                tl:tl_textsize="@dimen/base_sp15"
+                tl:tl_underline_color="#DBDBDB"
+                tl:tl_underline_height="0dp" />
+
+            <ImageView
+                android:id="@+id/mLeftIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/base_dp14"
+                android:paddingTop="@dimen/base_dp12"
+                android:paddingRight="@dimen/base_dp14"
+                android:paddingBottom="@dimen/base_dp12"
+                android:src="@mipmap/base_ic_left_back" />
+
+            <com.ruffian.library.widget.RLinearLayout
+                android:id="@+id/mSwitchYearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/base_dp7"
+                android:layout_marginEnd="@dimen/base_dp15"
+                android:orientation="vertical"
+                tl:border_color_normal="#F5C38C"
+                tl:border_width_normal="1px"
+                tl:layout_constraintLeft_toLeftOf="parent"
+                tl:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:id="@+id/mYearTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/base_dp6"
+                    android:layout_marginEnd="@dimen/base_dp6"
+                    android:text="2022"
+                    android:textColor="#703C1F"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5C38C"
+                    android:gravity="center"
+                    android:text="切换"
+                    android:textColor="#ff703c1f"
+                    android:textSize="12sp" />
+            </com.ruffian.library.widget.RLinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</layout>

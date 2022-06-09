@@ -1,7 +1,9 @@
 package com.trinidad.beansanconstruction
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.view.View
 import android.widget.ImageView
 import android.widget.TabHost
@@ -10,21 +12,29 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTabHost
 import androidx.lifecycle.lifecycleScope
 import com.amap.api.location.AMapLocationClient
+import com.hjq.permissions.OnPermissionCallback
+import com.hjq.permissions.Permission
+import com.hjq.permissions.XXPermissions
 import com.moufans.lib_base.base.activity.BaseActivity
 import com.moufans.lib_base.ext.convertReqExecute
 import com.moufans.lib_base.utils.StatusBarUtil
+import com.moufans.update.OnAppUpdateListener
+import com.moufans.update.VersionDataBean
 import com.trinidad.beansanconstruction.constants.AppConstants
 import com.trinidad.beansanconstruction.databinding.ActivityMainBinding
 import com.trinidad.beansanconstruction.event.LoginEvent
 import com.trinidad.beansanconstruction.ext.appApi
 import com.trinidad.beansanconstruction.ui.activity.LoginActivity
+import com.trinidad.beansanconstruction.ui.activity.RichScanActivity
 import com.trinidad.beansanconstruction.ui.fragment.HomeFragment
 import com.trinidad.beansanconstruction.ui.fragment.MineFragment
+import com.trinidad.beansanconstruction.utils.AppVersionUpdateUtils
 import com.trinidad.beansanconstruction.utils.SharedPrefUtil
 import kotlinx.coroutines.launch
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
+
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     private val mFragmentList = listOf(HomeFragment::class.java, Fragment::class.java, MineFragment::class.java)
@@ -73,10 +83,50 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun initListener() {
+
     }
 
+
     override fun processingLogic() {
+        val xp = XXPermissions.with(this) // 不适配 Android 11 可以这样写
+        //.permission(Permission.Group.STORAGE)
+        // 适配 Android 11 需要这样写，这里无需再写 Permission.Group.STORAGE
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.R) {
+            xp.permission(Manifest.permission.MANAGE_EXTERNAL_STORAGE)
+        } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.R) {
+            xp.permission(Permission.Group.STORAGE)
+        } else {
+            xp.permission(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
+        }
+        xp.request(object : OnPermissionCallback {
+            override fun onGranted(permissions: List<String>, all: Boolean) {
+                if (all) {
+                    AppVersionUpdateUtils.checkVersion(this@MainActivity, object : OnAppUpdateListener {
+                        override fun onSuccess(appVersionInfo: VersionDataBean?) {
+                            AppVersionUpdateUtils.upDataVersion(this@MainActivity, appVersionInfo) { url, isUpdate ->
+                                if (isUpdate) {
+                                    AppVersionUpdateUtils.toDownload(this@MainActivity, url)
+                                }
+                            }
+                        }
+
+                        override fun onFailed(failedMessage: String?) {
+                        }
+
+                    })
+                }
+            }
+
+            override fun onDenied(permissions: List<String>, never: Boolean) {
+                if (never) {
+                    // 如果是被永久拒绝就跳转到应用权限系统设置页面
+                    XXPermissions.startPermissionActivity(this@MainActivity, permissions)
+                }
+            }
+        })
+
     }
+
 
     private fun getUserInfo() {
         lifecycleScope.launch {
@@ -111,6 +161,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         // 设置当前的tab
         if (currentIndex == 1) {
             // 跳到扫码界面
+            startActivity(RichScanActivity.newIntent(this))
         } else {
             // 切换
             mFragmentTabHost?.currentTab = currentIndex

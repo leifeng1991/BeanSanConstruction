@@ -55,7 +55,7 @@ android {
             signingConfig signingConfigs.release
             // 正式版本App名称
             resValue("string", "app_name", "千里科技")
-            buildConfigField("String", "BASE_URL", stringValue("https://test.wj23.com.cn/bs/"))
+            buildConfigField("String", "BASE_URL", stringValue("http://www.qlkeji.com.cn/bs/"))
 
         }
 
